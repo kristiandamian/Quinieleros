@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quinieleros", "Quinieleros.csproj", "{30DA4111-F2F1-4D55-8DEB-26F87D2B40CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quinieleros.BO", "..\Quinieleros.BO\Quinieleros.BO.csproj", "{5FEE7D4F-2A1D-47EC-852B-57C84A5AB04E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quinieleros.DAL", "..\Quinieleros.DAL\Quinieleros.DAL.csproj", "{269CE4F6-3642-4B03-9A76-AA2C4BDD7F17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quinieleros.Models", "..\Quinieleros.Models\Quinieleros.Models.csproj", "{B420F761-2D58-448B-B523-05C97D500723}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{269CE4F6-3642-4B03-9A76-AA2C4BDD7F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269CE4F6-3642-4B03-9A76-AA2C4BDD7F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269CE4F6-3642-4B03-9A76-AA2C4BDD7F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269CE4F6-3642-4B03-9A76-AA2C4BDD7F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30DA4111-F2F1-4D55-8DEB-26F87D2B40CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DA4111-F2F1-4D55-8DEB-26F87D2B40CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DA4111-F2F1-4D55-8DEB-26F87D2B40CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DA4111-F2F1-4D55-8DEB-26F87D2B40CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FEE7D4F-2A1D-47EC-852B-57C84A5AB04E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEE7D4F-2A1D-47EC-852B-57C84A5AB04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEE7D4F-2A1D-47EC-852B-57C84A5AB04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEE7D4F-2A1D-47EC-852B-57C84A5AB04E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B420F761-2D58-448B-B523-05C97D500723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B420F761-2D58-448B-B523-05C97D500723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B420F761-2D58-448B-B523-05C97D500723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B420F761-2D58-448B-B523-05C97D500723}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
