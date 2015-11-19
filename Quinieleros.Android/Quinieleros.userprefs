@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Quinieleros.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android_4__API_14" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Quinieleros.Models\MyClass.cs">
+    <Files>
+      <File FileName="MainActivity.cs" Line="1" Column="1" />
+      <File FileName="..\Quinieleros.BO\MyClass.cs" Line="1" Column="1" />
+      <File FileName="..\Quinieleros.DAL\MyClass.cs" Line="1" Column="1" />
+      <File FileName="..\Quinieleros.Models\MyClass.cs" Line="13" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

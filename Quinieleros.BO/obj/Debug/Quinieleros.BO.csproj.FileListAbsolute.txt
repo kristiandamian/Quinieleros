@@ -1,0 +1,11 @@
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\bin\Debug\Quinieleros.BO.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\bin\Debug\Quinieleros.BO.pdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\bin\Debug\Quinieleros.DAL.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\bin\Debug\Quinieleros.Models.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\bin\Debug\Quinieleros.DAL.pdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\bin\Debug\Quinieleros.Models.pdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\obj\Debug\Quinieleros.BO.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\obj\Debug\Quinieleros.BO.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\obj\Debug\Quinieleros.BO.pdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\obj\Debug\Quinieleros.BO.dll.mdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.BO\bin\Debug\Quinieleros.BO.dll.mdb
