@@ -1,0 +1,14 @@
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Info.plist
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/bin/iPhoneSimulator/Debug/Quinieleros.iOS.exe.mdb
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/bin/iPhoneSimulator/Debug/Quinieleros.iOS.exe
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/Quinieleros.iOS.exe
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/Quinieleros.iOS.exe.mdb
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/bin/iPhoneSimulator/Debug/Xamarin.Insights.dll
+/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/bin/iPhoneSimulator/Debug/PLCrashReporterUnifiedBinding.dll

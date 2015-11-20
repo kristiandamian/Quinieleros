@@ -1,0 +1,44 @@
+# Version: 9.2.1.51 (cycle6-xi: 3c0ec35)
+# [first argument, ignore] # /Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/9.2.1.51/bin/mtouch \
+	--cache \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--sim \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/bin/iPhoneSimulator/Debug/Quinieleros.iOS.app \
+	--executable \
+	Quinieleros.iOS \
+	--fastdev \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	8.3 \
+	--targetver \
+	8.3 \
+	--new-refcount \
+	--abi=i386 \
+	--symbollist \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
+	--dsym=no \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.Android/packages/Xamarin.Insights.1.10.6/lib/Xamarin.iOS10/Xamarin.Insights.dll \
+	-r \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.Android/packages/Xamarin.Insights.1.10.6/lib/Xamarin.iOS10/PLCrashReporterUnifiedBinding.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.Android/packages/Xamarin.Insights.1.10.6/lib/Xamarin.iOS10/Xamarin.Insights.dll \
+	-r \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.Android/packages/Xamarin.Insights.1.10.6/lib/Xamarin.iOS10/PLCrashReporterUnifiedBinding.dll \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
+	/Users/kristiandamian/Documents/apps/Quinieleros/Quinieleros.iOS/bin/iPhoneSimulator/Debug//Quinieleros.iOS.exe \
