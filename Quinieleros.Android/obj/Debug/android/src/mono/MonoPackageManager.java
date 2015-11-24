@@ -81,7 +81,13 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"Quinieleros.dll",
 		"Quinieleros.BO.dll",
+		"Quinieleros.DAL.dll",
 		"Quinieleros.Models.dll",
+		"SQLite.Net.dll",
+		"SQLite.Net.Platform.XamarinAndroid.dll",
+		"Xamarin.Android.Support.Design.dll",
+		"Xamarin.Android.Support.v4.dll",
+		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Insights.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Collections.dll",
@@ -136,5 +142,5 @@ class MonoPackageManager_Resources {
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_19";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_21";
 }

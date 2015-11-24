@@ -1,5 +1,6 @@
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Models\bin\Debug\Quinieleros.Models.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Models\bin\Debug\Quinieleros.Models.pdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Models\obj\Debug\Quinieleros.Models.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Models\obj\Debug\Quinieleros.Models.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Models\obj\Debug\Quinieleros.Models.pdb
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Models\obj\Debug\Quinieleros.Models.dll.mdb

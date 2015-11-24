@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <!--<style name="ThemeSplash" parent="android:Theme">
+	    	<item name="android:windowBackground">@drawable/splash_background</item>
+	    	<item name="android:windowNoTitle">true</item>
+	</style>-->
+  <!--TEMA DEL MENU-->
+  <style name="MyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="colorPrimary">#03A9F4</item>
+    <item name="colorPrimaryDark">#0288D1</item>
+    <item name="colorAccent">#FFC107</item>
+  </style>
+
+  <style name="ButtonFormTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:background">#B3E5FC</item>
+    <item name="android:textColor">#FFFFFF</item>
+    <item name="android:layout_margin">5dp</item>
+  </style>
+</resources>

@@ -1,6 +1,8 @@
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinieleros.DAL.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinieleros.DAL.pdb
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinieleros.Models.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\SQLite.Net.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\SQLitePCL.raw.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinieleros.Models.pdb
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\obj\Debug\Quinieleros.DAL.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\obj\Debug\Quinieleros.DAL.dll

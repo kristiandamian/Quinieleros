@@ -2,13 +2,16 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros\obj\Debug\__library_projects__\Xamarin.Insights\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\__library_projects__\SQLite.Net.Platform.XamarinAndroid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\__library_projects__\Xamarin.Insights\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros\obj\Debug\__library_projects__\Xamarin.Insights\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\__library_projects__\SQLite.Net.Platform.XamarinAndroid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\__library_projects__\Xamarin.Insights\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros\obj\Debug\__library_projects__\Xamarin.Insights.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\__library_projects__\SQLite.Net.Platform.XamarinAndroid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\__library_projects__\Xamarin.Insights.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
