@@ -69,5 +69,8 @@ C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\re
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\res\drawable-xxxhdpi\icon.png
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\R.cs.flag
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\uploadflags.txt
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\bin\Debug\Quinieleros.BO.dll.mdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\bin\Debug\Quinieleros.DAL.dll.mdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\bin\Debug\Quinieleros.Models.dll.mdb
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\Quinieleros.dll.mdb
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\bin\Debug\Quinieleros.dll.mdb
