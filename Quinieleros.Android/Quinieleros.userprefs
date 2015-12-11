@@ -1,12 +1,14 @@
 ﻿<Properties StartupItem="Quinieleros.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android_4__API_14" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Activities\MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Quinieleros.Ligas\Mexico\Primera\Dorados.cs">
     <Files>
       <File FileName="Resources\values\Strings.xml" Line="1" Column="1" />
       <File FileName="Resources\values\Styles.xml" Line="1" Column="1" />
       <File FileName="Properties\AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Activities\BaseActivity.cs" Line="1" Column="1" />
       <File FileName="Activities\MainActivity.cs" Line="18" Column="74" />
+      <File FileName="..\Quinieleros.Ligas\Mexico\LigaMexico.cs" Line="19" Column="13" />
+      <File FileName="..\Quinieleros.Ligas\Mexico\Primera\Dorados.cs" Line="11" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

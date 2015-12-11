@@ -12,6 +12,7 @@ C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\as
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\assemblies\Xamarin.Android.Support.Design.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\assemblies\Xamarin.Android.Support.v4.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\assemblies\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\assemblies\Xamarin.Android.Support.v7.RecyclerView.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\assemblies\Xamarin.Insights.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\assemblies\System.Collections.Concurrent.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Android\obj\Debug\assemblies\System.Collections.dll

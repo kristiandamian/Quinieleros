@@ -1,0 +1,25 @@
+﻿<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_Resultados"
+      
+      android:title="Resultados" />
+    <item
+      android:id="@+id/nav_CrearGrupo"
+      
+      android:title="Crear grupo" />
+
+  </group>
+  <item android:title="Extras">
+    <menu>
+      <item
+        android:id="@+id/nav_MisGrupos"
+        
+        android:title="Mis grupos" />
+      <item
+        android:id="@+id/nav_estadisticas"
+        android:title="Estadisticas" />
+    </menu>
+  </item>
+  <!--android:icon="@drawable/factura"-->
+</menu>

@@ -1,0 +1,4 @@
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Ligas\bin\Debug\Quinieleros.Ligas.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Ligas\bin\Debug\Quinieleros.Ligas.pdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Ligas\obj\Debug\Quinieleros.Ligas.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.Ligas\obj\Debug\Quinieleros.Ligas.pdb

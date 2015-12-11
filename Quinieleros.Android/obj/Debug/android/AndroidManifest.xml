@@ -3,6 +3,7 @@
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="16" />
   <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:allowBackup="true" android:label="Quinieleros" android:theme="@android:style/Theme.Holo.Light.DarkActionBar" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
     <activity android:icon="@drawable/icon" android:label="Quinieleros" android:theme="@style/MyTheme" android:name="md51d8b3f29ec674828f6acc33cef4a7e85.MainActivity">

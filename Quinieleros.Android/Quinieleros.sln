@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quinieleros.Models", "..\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quinieleros.iOS", "..\Quinieleros.iOS\Quinieleros.iOS.csproj", "{81F80623-BAAD-462A-819D-A9243875DE6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quinieleros.Ligas", "..\Quinieleros.Ligas\Quinieleros.Ligas.csproj", "{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{81F80623-BAAD-462A-819D-A9243875DE6E}.Release|iPhone.Build.0 = Release|iPhone
 		{81F80623-BAAD-462A-819D-A9243875DE6E}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{81F80623-BAAD-462A-819D-A9243875DE6E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Release|iPhone.Build.0 = Release|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{82E6F02C-9BA0-4713-ACF3-3F90C7BEC67F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{B420F761-2D58-448B-B523-05C97D500723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B420F761-2D58-448B-B523-05C97D500723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B420F761-2D58-448B-B523-05C97D500723}.Debug|iPhone.ActiveCfg = Debug|Any CPU
