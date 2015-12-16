@@ -9,6 +9,7 @@ namespace Quinieleros.Ligas
 		public const string PrefijoIconiOS = "@drawable/";
 		public string Nombre { get; set; }
 		public List<string> Apodos { get; set; }
+		public string id { get; set; }
 
 		protected string _icon;
 		public string Icon { 

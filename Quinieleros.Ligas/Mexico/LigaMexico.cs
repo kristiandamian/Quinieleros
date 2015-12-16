@@ -8,7 +8,7 @@ namespace Quinieleros.Ligas
 		new public List<EquipoMexico> Equipos { get; set; }
 		public LigaMexico ()
 		{
-			this.NombreLiga = "Liga BBVA de México";
+			this.NombreLiga = "Liga Bancomer MX";
 			this.Pais = "México";
 			this.Equipos = getEquipos ();
 		}

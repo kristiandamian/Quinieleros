@@ -7,5 +7,5 @@ C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinie
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\obj\Debug\Quinieleros.DAL.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\obj\Debug\Quinieleros.DAL.dll
 C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\obj\Debug\Quinieleros.DAL.pdb
-C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\obj\Debug\Quinieleros.DAL.dll.mdb
-C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinieleros.DAL.dll.mdb
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinieleros.Ligas.dll
+C:\Users\Usuario\Documents\Projects\Quinieleros\Quinieleros.DAL\bin\Debug\Quinieleros.Ligas.pdb

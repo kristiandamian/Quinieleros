@@ -7,9 +7,10 @@ namespace Quinieleros.Ligas
 	{
 		public Pumas ()
 		{
-			this.Apodos = new List<string> (){ "Pumas", "Felinos", "Auriazules" };
+			this.Apodos = new List<string> (){ "Pumas", "Felinos", "Auriazules","Los del pedregal" };
 			this.Nombre = "Pumas UNAM";
 			this.Icon = "";
+			this.id = "PUMAS";
 		}
 	}
 }

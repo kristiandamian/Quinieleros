@@ -7,9 +7,10 @@ namespace Quinieleros.Ligas
 	{
 		public Dorados ()
 		{
-			this.Apodos = new List<string> (){ "El gran pez", "Felinos", "Auriazules" };
+			this.Apodos = new List<string> (){ "El gran pez", "los Dorados" };
 			this.Nombre = "Dorados de Sinaloa";
 			this.Icon = "";
+			this.id = "DORADOS";
 		}
 	}
 }

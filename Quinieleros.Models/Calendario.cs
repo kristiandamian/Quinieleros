@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+
 
 namespace Quinieleros.Models
 {
-	public class MyClass
+	public class Calendario
 	{
-		public MyClass ()
-		{
-		}
+		public string Nombre { get; set; }
+		public List<Jornada> Jornadas{ get; set; }
+		public DateTime FechaInicio { get; set; }
+		public DateTime FechaFin { get; set; }
+		public Ligas.LigaBase Liga { get; set; }
 	}
 }
 

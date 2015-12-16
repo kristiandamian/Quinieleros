@@ -2,8 +2,11 @@
 
 namespace Quinieleros.Models
 {
-	public enum enumeradores
+	public enum Resultado
 	{
+		LocalGana,
+		Empate,
+		VisitanteGana
 	}
 }
 
