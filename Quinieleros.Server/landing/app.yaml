@@ -1,0 +1,40 @@
+application: quinieleros-landing
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+# Defaul expiration time for static assets.
+default_expiration: "30d"
+
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /img
+  static_dir: static/img
+- url: /js
+  static_dir: static/js
+- url: /css
+  static_dir: static/css
+- url: /fonts
+  static_dir: static/fonts
+- url: /font-awesome
+  static_dir: static/font-awesome
+- url: /font-awesome/css
+  static_dir: static/font-awesome/css
+- url: /assets
+  static_dir: assets
+
+
+- url: .*
+  script: main.app
+  secure: always
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
