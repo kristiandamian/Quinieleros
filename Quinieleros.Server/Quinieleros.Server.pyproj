@@ -21,15 +21,9 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="backend API\appengine_config.py">
+    <Compile Include="backend API\endpointsModels.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="backend API\endpoints_proto_datastore\ndb\model.py" />
-    <Compile Include="backend API\endpoints_proto_datastore\ndb\properties.py" />
-    <Compile Include="backend API\endpoints_proto_datastore\ndb\utils.py" />
-    <Compile Include="backend API\endpoints_proto_datastore\ndb\__init__.py" />
-    <Compile Include="backend API\endpoints_proto_datastore\utils.py" />
-    <Compile Include="backend API\endpoints_proto_datastore\__init__.py" />
     <Compile Include="backend API\models.py">
       <SubType>Code</SubType>
     </Compile>
@@ -53,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="backend API\app.yaml" />
-    <Content Include="backend API\endpoints_proto_datastore\README" />
     <Content Include="landing\app.yaml" />
     <Content Include="landing\favicon.ico" />
     <Content Include="landing\lib\httplib2\cacerts.txt" />
@@ -122,8 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="backend API" />
-    <Folder Include="backend API\endpoints_proto_datastore\" />
-    <Folder Include="backend API\endpoints_proto_datastore\ndb\" />
     <Folder Include="landing" />
     <Folder Include="landing\auth" />
     <Folder Include="landing\core" />

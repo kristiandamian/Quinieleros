@@ -8,28 +8,28 @@ from protorpc import message_types
 from protorpc import remote
 from google.appengine.ext import ndb
 from endpoints_proto_datastore.ndb import EndpointsModel
+from endpointsModels import GrupoForm
+from endpointsModels import GRUPO_GET_REQUEST
+from models import Grupo
 
 package = 'Quinieleros'
 
-#####class Resultado(EndpointsModel):
-#####  """Ejecucion de un resultado de un partido."""
-#####  id = ndb.IntegerProperty()
-#####  Centro = ndb.StringProperty()
-#####  Id_Procedimiento = ndb.IntegerProperty()
-#####  FechaInicio = ndb.DateTimeProperty()  ## o deberian ser -> StringField
-#####  FechaFin = ndb.DateTimeProperty()     ## o deberian ser -> StringField
-
-
-#####class ResultadosCollection(EndpointsModel):
-#####    items = ndb.StructuredProperty(Resultado, repeated=True)
-
-
-@endpoints.api(name='quinieleros', version='v1')
+@endpoints.api(name='quinieleros', version='v1', description='API restful para el sitio quinieleros.com')
 class QuinielerosApi(remote.Service):
-    """Auditimer API v1."""
-    @ResultadosCollection.method(path='resultados', http_method='POST',
-                      name='quinieleros.guardarResultados')
-    def guardar_resultados(self, request):
+    """API restful para el sitio quinieleros.com"""
+
+    #######################   GRUPOS   #######################
+    @endpoints.method(GrupoForm, message_types.BooleanMessage,
+                    path='grupos/add', http_method='POST',
+                    name='quinieleros.generargrupo')
+    def greetings_list(self, grupo):
+        return grupo
+
+    @endpoints.method(GRUPO_GET_REQUEST,
+                  path='grupos/{grupoKey}', http_method='GET',
+                  name='quinieleros.obtenergrupo')
+    def get_grupo(self, request):
         return request
+
 
 APPLICATION = endpoints.api_server([QuinielerosApi])
