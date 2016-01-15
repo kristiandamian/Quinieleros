@@ -7,10 +7,9 @@ from protorpc import messages
 from protorpc import message_types
 from protorpc import remote
 from google.appengine.ext import ndb
-from endpoints_proto_datastore.ndb import EndpointsModel
-from endpointsModels import GrupoForm
+from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
+from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import GRUPO_GET_REQUEST
-from models import Grupo
 
 package = 'Quinieleros'
 
@@ -19,17 +18,25 @@ class QuinielerosApi(remote.Service):
     """API restful para el sitio quinieleros.com"""
 
     #######################   GRUPOS   #######################
-    @endpoints.method(GrupoForm, message_types.BooleanMessage,
+    @endpoints.method(GrupoForm, BooleanMessage,
                     path='grupos/add', http_method='POST',
-                    name='quinieleros.generargrupo')
-    def greetings_list(self, grupo):
-        return grupo
+                    name='generar_grupo')
+    def save_grupo(self, grupo):
+       return grabar_grupo(grupo)
 
-    @endpoints.method(GRUPO_GET_REQUEST,
+    @endpoints.method(GRUPO_GET_REQUEST, GrupoMessage,
                   path='grupos/{grupoKey}', http_method='GET',
-                  name='quinieleros.obtenergrupo')
+                  name='obtener_grupo')
     def get_grupo(self, request):
-        return request
+        return buscar_grupo(request)
+
+
+    @endpoints.method(GRUPO_GET_REQUEST, GrupoMessageCollection,
+                  path='grupos/all/{grupoKey}', http_method='GET',
+                  name='obtener_grupos_del_usuario')
+    def get_grupo_byUser(self, request):
+        return buscar_grupos(request)
+
 
 
 APPLICATION = endpoints.api_server([QuinielerosApi])

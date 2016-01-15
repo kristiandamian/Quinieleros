@@ -19,7 +19,7 @@ class Liga(ndb.Model):
     ClaveLiga = ndb.StringProperty()
     Pais = ndb.StringProperty()
 
-class Equipo(ndb.podel):
+class Equipo(ndb.Model):
     Nombre = ndb.StringProperty()
     Apodos = ndb.StringProperty(repeated=True)
     id = ndb.StringProperty()
@@ -48,13 +48,6 @@ class Partido(ndb.Model):
     resultado= ndb.StringProperty(default="NO_ESPECIFICADO")
     Info1 = ndb.StringProperty() #Nombre del estadio, ciudad
     Info2 = ndb.StringProperty() #fecha, hora capacidad, etc.
-
-class ResultadosPartido(messages.Enum):
-    """Enumerador del resultado"""
-    NO_ESPECIFICADO = 1
-    GANA_LOCAL = 2
-    GANA_VISITANTE = 3
-    EMPATE = 4
 
 class ResultadoQuiniela(ndb.Model):
     usuario = ndb.KeyProperty(kind="Usuario")
