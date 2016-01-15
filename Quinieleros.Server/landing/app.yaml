@@ -21,6 +21,8 @@ handlers:
   static_dir: static/css
 - url: /fonts
   static_dir: static/fonts
+- url: /font
+  static_dir: static/font
 - url: /font-awesome
   static_dir: static/font-awesome
 - url: /font-awesome/css

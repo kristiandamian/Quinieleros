@@ -1,0 +1,50 @@
+﻿.avatar{
+    display:inline-block;
+    height:100%;
+    width:auto;
+    vertical-align:middle;
+    margin-right:20%;
+}
+.avatar-responsive{
+    max-width: 100%;
+    height: auto;
+    margin-top: 10%;
+}
+.ads {
+    text-align:center;
+}
+.icon-menu{
+    float:left;
+    margin-right:10%;
+}
+.circular {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+.header-user{
+    width:100%;
+    background-color: #90a4ae;
+}
+.username{
+    padding: 0;
+    text-transform: capitalize;
+    margin: 0;
+    text-shadow: 1px 1px 1px #0097a7; 
+    font-size: 15px;
+    display: block;
+    height: 42px;
+    line-height: 42px;
+}
+.logout{
+     margin-top: -16px;
+    font-size: 13px;
+    box-sizing: inherit;
+    display: block;
+    line-height: 40px !important;
+    text-align: right;
+    text-shadow: 1px 1px 1px #0097a7; 
+    color: white !important;
+}
+
+

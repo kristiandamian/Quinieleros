@@ -1,0 +1,10 @@
+﻿.boton-web{
+    min-width:200px;
+    margin-bottom:20%;
+    margin-top:10%;
+}
+.icon {
+    position: relative;
+    left: -15%;
+    top:10%;
+}
