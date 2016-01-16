@@ -21,11 +21,23 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="backend API\core\calendarios.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="backend API\core\grupos.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="backend API\core\jornadas.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="backend API\core\ligas.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="backend API\core\__init__.py" />
     <Compile Include="backend API\endpointsModels.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="backend API\helpers\populateNDB.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="backend API\models.py">
@@ -62,6 +74,7 @@
     <Content Include="landing\static\css\general.css" />
     <Content Include="landing\static\css\materialize.css" />
     <Content Include="landing\static\css\materialize.min.css" />
+    <Content Include="landing\static\css\video.css" />
     <Content Include="landing\static\font-awesome\css\font-awesome.css" />
     <Content Include="landing\static\font-awesome\css\font-awesome.min.css" />
     <Content Include="landing\static\font-awesome\fonts\fontawesome-webfont.eot" />
@@ -126,6 +139,7 @@
     <Content Include="landing\static\font\roboto\Roboto-Thin.ttf" />
     <Content Include="landing\static\font\roboto\Roboto-Thin.woff" />
     <Content Include="landing\static\font\roboto\Roboto-Thin.woff2" />
+    <Content Include="landing\static\img\beach-soccer.jpg" />
     <Content Include="landing\static\img\missing-avatar.png" />
     <Content Include="landing\static\img\no_user.jpg" />
     <Content Include="landing\static\js\agency.js" />
@@ -141,6 +155,12 @@
     <Content Include="landing\static\less\mixins.less" />
     <Content Include="landing\static\less\variables.less" />
     <Content Include="landing\static\mail\contact_me.php" />
+    <Content Include="landing\static\video\0163_yellowblueinkinwater_540p.mov" />
+    <Content Include="landing\static\video\0163_yellowblueinkinwater_540p.mp4" />
+    <Content Include="landing\static\video\beach-soccer.jpg" />
+    <Content Include="landing\static\video\beach-soccer.mp4" />
+    <Content Include="landing\static\video\beach-soccer.ogv" />
+    <Content Include="landing\static\video\beach-soccer.webm" />
     <Content Include="landing\templates\avisoprivacidad.html" />
     <Content Include="landing\templates\error.html" />
     <Content Include="landing\templates\index.html" />
@@ -246,6 +266,7 @@
   <ItemGroup>
     <Folder Include="backend API" />
     <Folder Include="backend API\core\" />
+    <Folder Include="backend API\helpers\" />
     <Folder Include="landing" />
     <Folder Include="landing\auth" />
     <Folder Include="landing\core" />
@@ -269,6 +290,7 @@
     <Folder Include="landing\static\js" />
     <Folder Include="landing\static\less\" />
     <Folder Include="landing\static\mail\" />
+    <Folder Include="landing\static\video\" />
     <Folder Include="landing\templates" />
     <Folder Include="materialize-src\" />
     <Folder Include="materialize-src\css\" />

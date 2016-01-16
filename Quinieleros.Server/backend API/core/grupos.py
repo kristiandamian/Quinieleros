@@ -7,7 +7,7 @@ from protorpc import remote
 from google.appengine.ext import ndb
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import GRUPO_GET_REQUEST
-from models import Grupo, Usuario
+from models import Grupo, Usuario, Calendario
 
 def grabar_grupo(grupo):
     usrs=[]
@@ -19,11 +19,16 @@ def grabar_grupo(grupo):
             usr.Correo = user
             usr.put()
             usrs.append(usr.key)
-                
-        _grp=Grupo()
-        _grp.Nombre=grupo.Nombre
-        _grp.usuarios=usrs 
-        _grp.put()
+        cal=Calendario.get_by_id(grupo.calendarioKey)
+        if cal!=None:
+            _grp=Grupo()
+            _grp.Nombre=grupo.Nombre
+            _grp.usuarios=usrs 
+            _grp.calendario = cal.key
+            _grp.put()
+        else:
+            error=True
+            msg="No existe el calendario"
     except Exception, ex:
         error=True
         msg= str(ex)

@@ -8,8 +8,14 @@ from protorpc import message_types
 from protorpc import remote
 from google.appengine.ext import ndb
 from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
+from core.ligas import buscar_ligas
+from core.calendarios import buscar_calendarios
+from core.jornadas import buscar_jornada
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
-from endpointsModels import GRUPO_GET_REQUEST
+from endpointsModels import LigasMessage,LigasMessageCollection
+from endpointsModels import CalendarioMessage, CalendarioMessageCollection
+from endpointsModels import JornadaMessage, PartidoMessage
+from endpointsModels import GRUPO_GET_REQUEST, JORNADA_GET_REQUEST
 
 package = 'Quinieleros'
 
@@ -17,7 +23,7 @@ package = 'Quinieleros'
 class QuinielerosApi(remote.Service):
     """API restful para el sitio quinieleros.com"""
 
-    #######################   GRUPOS   #######################
+    #######################     GRUPOS     #######################
     @endpoints.method(GrupoForm, BooleanMessage,
                     path='grupos/add', http_method='POST',
                     name='generar_grupo')
@@ -26,17 +32,36 @@ class QuinielerosApi(remote.Service):
 
     @endpoints.method(GRUPO_GET_REQUEST, GrupoMessage,
                   path='grupos/{grupoKey}', http_method='GET',
-                  name='obtener_grupo')
+                  name='obtener_grupo') 
     def get_grupo(self, request):
         return buscar_grupo(request)
-
 
     @endpoints.method(GRUPO_GET_REQUEST, GrupoMessageCollection,
                   path='grupos/all/{grupoKey}', http_method='GET',
                   name='obtener_grupos_del_usuario')
     def get_grupo_byUser(self, request):
-        return buscar_grupos(request)
-
-
-
+        return buscar_ligas(request)
+    #######################     LIGAS      #######################
+    @endpoints.method(message_types.VoidMessage, LigasMessageCollection,
+                  path='ligas/all', http_method='GET',
+                  name='obtener_todas_las_ligas')
+    def get_ligas(self, request):
+        return buscar_ligas(request)
+    #######################   CALENDARIOS  #######################
+    @endpoints.method(GRUPO_GET_REQUEST, CalendarioMessageCollection,
+                  path='ligas/{grupoKey}/calendarios', http_method='GET',
+                  name='obtener_calendarios_de_una_liga')
+    def get_calendarios(self, request):
+        return buscar_calendarios(request)
+    #######################    JORNADAS    #######################
+    #def get_jornada
+    @endpoints.method(JORNADA_GET_REQUEST, JornadaMessage,
+                  path='ligas/{ligaKey}/{calendariokey}/{jornada}', http_method='GET',
+                  name='obtener_jornada')
+    def get_jornada(self, request):
+        return buscar_jornada(request)
+    #######################   RESULTADOS   #######################
+    #def save_resultados
+    #def get_resultados
+    #def get_resultados_grupo
 APPLICATION = endpoints.api_server([QuinielerosApi])

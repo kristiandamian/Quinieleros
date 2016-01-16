@@ -19,6 +19,8 @@ handlers:
   static_dir: static/js
 - url: /css
   static_dir: static/css
+- url: /video
+  static_dir: static/video
 - url: /fonts
   static_dir: static/fonts
 - url: /font

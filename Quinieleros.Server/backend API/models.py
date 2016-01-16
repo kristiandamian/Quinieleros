@@ -3,11 +3,11 @@ __author__ = 'kristiandamian@gmail.com (Kristian Damian)'
 import endpoints
 from google.appengine.ext import ndb
 
-
 class Grupo(ndb.Model):
     """Grupo con un conjunto de usuarios para una liga"""
     Nombre = ndb.StringProperty()
     usuarios = ndb.KeyProperty(kind="Usuario", repeated=True)
+    calendario = ndb.KeyProperty(kind="Calendario")
 
 class Usuario(ndb.Model):
     Nombre = ndb.StringProperty()
@@ -31,12 +31,14 @@ class Calendario(ndb.Model):
     FechaInicio = ndb.DateProperty()
     FechaFin = ndb.DateProperty()
     liga = ndb.KeyProperty(kind="Liga")
+    abierto = ndb.BooleanProperty()
 
 class Jornada(ndb.Model):
     Nombre = ndb.StringProperty()
-    id = ndb.StringProperty()
     Numero = ndb.IntegerProperty()
+    FechaMaxima = ndb.DateProperty() #Fecha maxima para poner resultados
     calendario = ndb.KeyProperty(kind="Calendario")
+    abierto = ndb.BooleanProperty()
 
 class Partido(ndb.Model):
     Fecha = ndb.DateProperty()
