@@ -5,7 +5,6 @@ from protorpc import messages
 from protorpc import message_types
 from protorpc import remote
 from google.appengine.ext import ndb
-from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import CalendarioMessage, CalendarioMessageCollection
 from endpointsModels import GRUPO_GET_REQUEST
 from models import Grupo, Usuario, Calendario, Liga

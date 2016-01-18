@@ -33,6 +33,9 @@
     <Compile Include="backend API\core\ligas.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="backend API\core\resultados.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="backend API\core\__init__.py" />
     <Compile Include="backend API\endpointsModels.py">
       <SubType>Code</SubType>

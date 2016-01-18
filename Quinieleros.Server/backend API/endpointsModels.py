@@ -51,6 +51,11 @@ class PartidoMessage(messages.Message):
     Info1 = messages.StringField(4)
     Info2 = messages.StringField(5)
     key = messages.StringField(6)
+    #######################################################################
+    acierto = messages.BooleanField(7) #Falta leer este en jornada
+    resultado=messages.StringField(8)  #Falta leer este en jornada
+    GolesLocal = messages.IntegerField(9) #Falta leer este en jornada
+    GolesVisitante = messages.IntegerField(19) #Falta leer este en jornada
 
 class JornadaMessage(messages.Message):
     Nombre = messages.StringField(1)
