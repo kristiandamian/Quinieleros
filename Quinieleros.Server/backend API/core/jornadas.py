@@ -5,7 +5,8 @@ from protorpc import messages
 from protorpc import message_types
 from protorpc import remote
 from google.appengine.ext import ndb
-from endpointsModels import EquipoMessage, PartidoMessage, JornadaMessage
+from core.resultados import calculoResultado, es_acierto
+from endpointsModels import EquipoMessage, PartidoMessage, JornadaMessage, ResultadosPartido
 from models import Grupo, Usuario, Calendario, Liga, Equipo, Partido, Jornada
 
 def buscar_jornada(request):
@@ -21,6 +22,10 @@ def buscar_jornada(request):
                 partido.Info1 = p.Info1
                 partido.Info2 = p.Info2
                 partido.key = p.key.id()
+                partido.acierto = es_acierto(request.usuario, p, p.GolesLocal, p.GolesVisitante)
+                partido.resultado = calculoResultado(p.GolesLocal, p.GolesVisitante)
+                partido.GolesLocal=p.GolesLocal
+                partido.GolesVisitante=p.GolesVisitante
                 local= EquipoMessage()
                 l=Equipo.get_by_id(p.Local)
                 if l!=None:

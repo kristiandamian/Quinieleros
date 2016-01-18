@@ -52,16 +52,24 @@ class PartidoMessage(messages.Message):
     Info2 = messages.StringField(5)
     key = messages.StringField(6)
     #######################################################################
-    acierto = messages.BooleanField(7) #Falta leer este en jornada
-    resultado=messages.StringField(8)  #Falta leer este en jornada
-    GolesLocal = messages.IntegerField(9) #Falta leer este en jornada
-    GolesVisitante = messages.IntegerField(19) #Falta leer este en jornada
+    acierto = messages.BooleanField(7) 
+    resultado=messages.StringField(8)  
+    GolesLocal = messages.IntegerField(9) 
+    GolesVisitante = messages.IntegerField(19) 
 
 class JornadaMessage(messages.Message):
     Nombre = messages.StringField(1)
     key = messages.StringField(2)
     partidos = messages.MessageField(PartidoMessage, 3, repeated=True)
 
+class Resultado(messages.Message):
+    partido = messages.StringField(1)
+    resultado = messages.EnumField('ResultadosPartido', 2)
+
+class Resultados(messages.Message):
+    calendariokey=messages.StringField(1)
+    resultados = messages.MessageField(Resultado, 2, repeated=True)
+    correo = messages.StringField(3)
 
 GRUPO_GET_REQUEST = endpoints.ResourceContainer(
     message_types.VoidMessage,
@@ -73,7 +81,15 @@ JORNADA_GET_REQUEST = endpoints.ResourceContainer(
     ligaKey=messages.StringField(1),
     calendariokey=messages.StringField(2),
     jornada=messages.StringField(3),
+    usuario=messages.StringField(4),
 )
+
+RESULTADO_GET_REQUEST = endpoints.ResourceContainer(
+    message_types.VoidMessage,
+    calendariokey=messages.StringField(1),
+    jornada=messages.StringField(2),
+)
+
 
 class ResultadosPartido(messages.Enum):
     """Enumerador del resultado"""
