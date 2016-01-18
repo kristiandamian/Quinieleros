@@ -7,7 +7,7 @@ from protorpc import remote
 from google.appengine.ext import ndb
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import EquipoMessage, PartidoMessage, JornadaMessage, ResultadosPartido
-from endpointsModels import Resultados, Resultado
+from endpointsModels import Resultados, Resultado, ResultadoGrupoJornada, ResultadoGrupo
 from models import Grupo, Usuario, Calendario, Liga, Equipo, Partido, Jornada, ResultadoQuiniela
 
 
@@ -35,9 +35,28 @@ def guardar_resultados(request):
     return respuesta
 
 
-def get_resultados_grupo(request):
-    pass 
-
+def obtener_resultados_grupo(request):
+    grupo=Grupo.get_by_id(request.grupoKey) 
+    resultados = ResultadoGrupo()
+    _match_res=[]
+    if grupo!=None:
+        jornadas=Jornada.query(Jornada.calendario==grupo.calendario)
+        for j in jornadas:
+            partidos=Partido.query(Partido.jornada==j.key)
+            for usr in grupo.usuarios:
+                resultado = ResultadoGrupoJornada()
+                resultado.jornada=str( j.Numero)
+                resultado.nombre=Usuario.get_by_id(usr.key.id()).Nombre
+                resultado.usuario=usr.key.id()
+                for p in partidos:
+                    res = ResultadoQuiniela.query(ResultadoQuiniela.partido == p.key, usuario = usr)
+                    for r in res:
+                        if r.acierto:
+                            resultado.aciertos = resultado.aciertos+1
+                _match_res.append(resultado)
+        resultados.nombre=grupo.Nombre
+        resultados.resultados=_match_res
+    return resultados
 
 def calculoResultado(golesLocal, golesVisitante):
     respuesta="NO_ESPECIFICADO"

@@ -5,9 +5,7 @@
 {% endblock %}
 {% block main %}
   {% if logged_in %}
-<p>Hey there. Looks like you're logged in already.</p>
-<a href="{{ url_for('profile') }}" class="btn">my profile</a>
-<a href="/logout" class="btn">logout</a>
+        <h2>Entrando al sitio</h2>
   {% else %}
 <!-- Start video hero -->
 
@@ -52,4 +50,13 @@
 <!-- End video hero -->
 
         {% endif %}
-        {% endblock %}
+ {% endblock %}
+{% block scripts %}
+<script type="text/javascript">
+ $(function(){
+  {% if logged_in %}
+    window.location.replace("/profile")
+  {% endif %}
+});
+</script>
+{% endblock %}

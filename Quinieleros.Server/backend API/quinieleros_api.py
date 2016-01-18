@@ -11,12 +11,12 @@ from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
 from core.ligas import buscar_ligas
 from core.calendarios import buscar_calendarios
 from core.jornadas import buscar_jornada
-from core.resultados import guardar_resultados, get_resultados_grupo
+from core.resultados import guardar_resultados, obtener_resultados_grupo
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import LigasMessage,LigasMessageCollection
 from endpointsModels import CalendarioMessage, CalendarioMessageCollection
 from endpointsModels import JornadaMessage, PartidoMessage
-from endpointsModels import Resultados, Resultado
+from endpointsModels import Resultados, Resultado, ResultadoGrupo
 from endpointsModels import GRUPO_GET_REQUEST, JORNADA_GET_REQUEST
 
 package = 'Quinieleros'
@@ -63,10 +63,14 @@ class QuinielerosApi(remote.Service):
         return buscar_jornada(request)
     #######################   RESULTADOS   #######################
     @endpoints.method(Resultados, BooleanMessage,
-                  path='ligas/resultados', http_method='POST',
+                  path='resultados', http_method='POST',
                   name='guardar_resultados')
     def save_resultados(self, request):
         return guardar_resultados(request)
 
-    #def get_resultados_grupo
+    @endpoints.method(GRUPO_GET_REQUEST, ResultadoGrupo,
+                  path='resultados/{grupoKey}/', http_method='GET',
+                  name='obtener_resultados_grupo')
+    def obtener_resultados_grupo(self, request):
+        return buscar_jornada(request)
 APPLICATION = endpoints.api_server([QuinielerosApi])

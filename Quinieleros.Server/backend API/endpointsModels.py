@@ -71,6 +71,16 @@ class Resultados(messages.Message):
     resultados = messages.MessageField(Resultado, 2, repeated=True)
     correo = messages.StringField(3)
 
+class ResultadoGrupoJornada(messages.Message):
+    jornada=messages.StringField(1)
+    aciertos=messages.IntegerField(2)
+    usuario=messages.StringField(3)
+    nombre=messages.StringField(4)
+
+class ResultadoGrupo(messages.Message):
+    nombre=messages.StringField(1)
+    resultados = messages.MessageField(ResultadoGrupoJornada, 2, repeated=True)
+
 GRUPO_GET_REQUEST = endpoints.ResourceContainer(
     message_types.VoidMessage,
     grupoKey=messages.StringField(1),

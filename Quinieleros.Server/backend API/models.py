@@ -22,7 +22,6 @@ class Liga(ndb.Model):
 class Equipo(ndb.Model):
     Nombre = ndb.StringProperty()
     Apodos = ndb.StringProperty(repeated=True)
-    id = ndb.StringProperty()
     liga = ndb.KeyProperty(kind="Liga")
 
 class Calendario(ndb.Model):
