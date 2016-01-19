@@ -51,12 +51,3 @@
 
         {% endif %}
  {% endblock %}
-{% block scripts %}
-<script type="text/javascript">
- $(function(){
-  {% if logged_in %}
-    window.location.replace("/profile")
-  {% endif %}
-});
-</script>
-{% endblock %}

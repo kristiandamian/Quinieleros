@@ -97,19 +97,28 @@
     <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    {% block scripts %}
+    
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $(".button-collapse").sideNav();
-        });
-    </script>
-
-
-
     
+    <script type="text/javascript"> 
+        /**
+         * Initializes the Google API JavaScript client. Bootstrap the angular module after loading the Google libraries
+         * so that Google JavaScript library ready in the angular modules.
+         */
+        function init() {
+            var ROOT = '//quinieleros-api.appspot.com/_ah/api';
+            
+            gapi.client.load('quinieleros', 'v1', null, ROOT);
+            $(".button-collapse").sideNav();
+        };
+   
+       
+    </script>
+    <script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
+
+    {% block scripts %}
     {% endblock %}
 </body>
 </html>

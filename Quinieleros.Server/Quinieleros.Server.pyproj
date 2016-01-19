@@ -152,6 +152,7 @@
     <Content Include="landing\static\js\cbpAnimatedHeader.min.js" />
     <Content Include="landing\static\js\classie.js" />
     <Content Include="landing\static\js\contact_me.js" />
+    <Content Include="landing\static\js\endpoint\grupos.js" />
     <Content Include="landing\static\js\jqBootstrapValidation.js" />
     <Content Include="landing\static\js\jquery.js" />
     <Content Include="landing\static\less\agency.less" />
@@ -291,6 +292,7 @@
     <Folder Include="landing\static\img" />
     <Folder Include="landing\static\img\equipos\" />
     <Folder Include="landing\static\js" />
+    <Folder Include="landing\static\js\endpoint\" />
     <Folder Include="landing\static\less\" />
     <Folder Include="landing\static\mail\" />
     <Folder Include="landing\static\video\" />

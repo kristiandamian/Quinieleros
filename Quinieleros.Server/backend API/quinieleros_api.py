@@ -42,7 +42,7 @@ class QuinielerosApi(remote.Service):
                   path='grupos/all/{grupoKey}', http_method='GET',
                   name='obtener_grupos_del_usuario')
     def get_grupo_byUser(self, request):
-        return buscar_ligas(request)
+        return buscar_grupos(request)
     #######################     LIGAS      #######################
     @endpoints.method(message_types.VoidMessage, LigasMessageCollection,
                   path='ligas/all', http_method='GET',
