@@ -55,7 +55,7 @@ class BaseRequestHandler(webapp2.RequestHandler):
     # Preset values for the template
     values = {
       'url_for': self.uri_for,
-      'logged_in': False, #self.logged_in,
+      'logged_in': self.logged_in,
       'flashes': self.session.get_flashes()
     }
 
@@ -74,8 +74,10 @@ class BaseRequestHandler(webapp2.RequestHandler):
 
 
 class InicioSesion(BaseRequestHandler):
+  
   def get(self):
     """Handles default landing page"""
+    self.logged_in=False
     self.render('index.html', {'destination_url': '/profile'})
 
 

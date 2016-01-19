@@ -24,18 +24,19 @@
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo">Quinieleros</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-
+                    {% if logged_in %}
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="resultados">Mis resultados</a></li>
                         <li><a href="grupos">Mis grupos</a></li>
                         <li><a href="estadisticas">Mis estadisticas</a></li>
-                        {% if logged_in %}
+                        
                         <li><a href="logout">logout</a></li>
                         {% if user %}
                         <li><img src="{{ user.avatar_url }}" class="avatar circular"></li>
                         {% endif %}
-                        {% endif %}
+                        
                     </ul>
+                    {% endif %}
                     <ul class="side-nav" id="mobile-demo">
                         <li class="header-user primary">
                             <div class="row">
@@ -57,10 +58,11 @@
                                 </div>
                             </div>
                         </li>
+                        {% if logged_in %}
                         <li><a href="resultados"><i class="material-icons small icon-menu">done</i>Mis resultados</a></li>
                         <li><a href="grupos"><i class="material-icons small icon-menu">supervisor_account</i>Mis grupos</a></li>
                         <li style="display:block"><a href="estadisticas"><i class="material-icons small icon-menu">trending_up</i>Mis estadisticas</a></li>
-
+                        {% endif %}
                     </ul>
                 </div>
             </nav>
