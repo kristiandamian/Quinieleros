@@ -3,22 +3,49 @@
 
 {% endblock %}
 {% block main %}
-  <div class="media">
-    <div class="img avatar">
-      <img src="{{ user.avatar_url }}">
+<div style="min-height:90%;">
+    <div class="row" data-bind='foreach: grupos'>
+        <div class="col s12 m6">
+            <div class="card blue-grey  darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title" data-bind="text:Nombre"></span>
+                </div>
+                <div class="card-action">
+                    <a href="#">Ver grupo</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="body">
-      <h1 style="margin-top: 0; padding-top: 0">Hola {{ user.name }}</h1>
-      <h1 style="margin-top: 0; padding-top: 0">Hola {{ user.email }}</h1>
-      <h1 style="margin-top: 0; padding-top: 0">Hola {{ user.link }}</h1>	
-      <p><a href="{{ user.link }}" target="_blank" rel="nofollow">{{ user.link }}</a></p>
+</div>
+<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px; height" id="addGrupo">
+    <a class="btn-floating btn-large waves-effect waves-light yellow modal-trigger" ><i class="material-icons">add</i></a>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
     </div>
-  </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" data-bind="click: addGrupo">Agree</a>
+    </div>
+</div>
+    {% endblock %}
 
+    {% block scripts %}
+    <script src="js/pages/profileKO.js"></script>
+    <script src="js/endpoint/grupos.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#addGrupo").css("bottom",document.getElementById('footer').offsetHeight + 10);
+            {% if logged_in %}
+            modelo = new modeloProfile();
+            ko.applyBindings(modelo);
+            setTimeout(function(){ modelo.ObtenerGrupos("{{ user.email }}", "{{ user.name }}");}, 2000)
 
+            {% endif %}
 
-  <p style="margin-top: 2em;">
-    <a href="/logout" class="btn">logout</a>
-  </p>
-{% endblock %}
-
+        });
+    </script>
+    {% endblock %}

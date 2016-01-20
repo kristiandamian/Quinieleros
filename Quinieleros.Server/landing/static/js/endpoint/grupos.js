@@ -5,6 +5,6 @@
         }).execute(function (resp) {
             console.log(resp.result.grupos);
             if (callback)
-                callback;
+                callback(resp.result.grupos);
         });
 }

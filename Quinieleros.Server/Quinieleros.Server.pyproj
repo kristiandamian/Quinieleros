@@ -71,6 +71,7 @@
     <Content Include="landing\index.yaml" />
     <Content Include="landing\lib\httplib2\cacerts.txt" />
     <Content Include="landing\static\css\agency.css" />
+    <Content Include="landing\static\css\block.css" />
     <Content Include="landing\static\css\bootstrap.css" />
     <Content Include="landing\static\css\bootstrap.min.css" />
     <Content Include="landing\static\css\buttons.css" />
@@ -155,6 +156,7 @@
     <Content Include="landing\static\js\endpoint\grupos.js" />
     <Content Include="landing\static\js\jqBootstrapValidation.js" />
     <Content Include="landing\static\js\jquery.js" />
+    <Content Include="landing\static\js\pages\profileKO.js" />
     <Content Include="landing\static\less\agency.less" />
     <Content Include="landing\static\less\mixins.less" />
     <Content Include="landing\static\less\variables.less" />
@@ -293,6 +295,7 @@
     <Folder Include="landing\static\img\equipos\" />
     <Folder Include="landing\static\js" />
     <Folder Include="landing\static\js\endpoint\" />
+    <Folder Include="landing\static\js\pages\" />
     <Folder Include="landing\static\less\" />
     <Folder Include="landing\static\mail\" />
     <Folder Include="landing\static\video\" />

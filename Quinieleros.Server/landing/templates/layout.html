@@ -7,7 +7,7 @@
         <title>Quinieleros</title>
         <meta name="author" content="kristian damian">
         <link rel="stylesheet" href="/css/general.css">
-
+        <link rel="stylesheet" href="/css/block.css">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
@@ -73,8 +73,18 @@
 
             {% block main %}{% endblock %}
         </div>
+
+        <div id="loading">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" id="footer">
         <!-- quinieleros adaptable -->
         <ins class="adsbygoogle"
              style="display:block"
@@ -102,6 +112,9 @@
     
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
+    
     <script type="text/javascript" src="js/materialize.min.js"></script>
     
     <script type="text/javascript"> 
@@ -110,7 +123,8 @@
          * so that Google JavaScript library ready in the angular modules.
          */
         function init() {
-            var ROOT = '//quinieleros-api.appspot.com/_ah/api';
+            $("#loading").hide();
+            var ROOT = 'https://quinieleros-api.appspot.com/_ah/api';
             
             gapi.client.load('quinieleros', 'v1', null, ROOT);
             $(".button-collapse").sideNav();
