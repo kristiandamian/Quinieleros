@@ -16,8 +16,8 @@ def buscar_calendarios(request):
         cals=Calendario.query(Calendario.liga == liga.key, Calendario.abierto == True)
         for c in cals:
             calendario=CalendarioMessage()
-            calendario.Nombre=liga.Nombre
-            calendario.key=liga.key.id()
+            calendario.Nombre=c.Nombre
+            calendario.key=c.key.id()
             calendarios.append(calendario)
     respuesta=CalendarioMessageCollection(calendarios=calendarios)
     return respuesta

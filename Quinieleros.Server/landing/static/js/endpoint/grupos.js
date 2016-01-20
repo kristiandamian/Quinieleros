@@ -8,3 +8,15 @@
                 callback(resp.result.grupos);
         });
 }
+
+save_grupo = function (nombre, usuarios, calendario, callback) {
+    gapi.client.save_grupo({
+        "Nombre": nombre,
+        "usuarios":usuarios,
+       "calendarioKey":calendario
+    }).execute(function (resp) {
+        console.log(resp.result);
+        if (callback)
+            callback(resp.result);
+    });
+}
