@@ -12,6 +12,7 @@ import sys
 from auth.secrets import SESSION_KEY
 from auth.handlers import InicioSesion
 from core.grupos import gruposHandler
+from core.calendarios import calendarioHandler
 from core.Privacidad import AvisoPrivacidad, TerminosYCondiciones
 import logging
 
@@ -21,13 +22,10 @@ if 'lib' not in sys.path:
 if 'auth' not in sys.path:
     sys.path[0:0] = ['auth']
 
-	
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
-
-
 
 	    
 #configuracion de webapp2
@@ -45,6 +43,7 @@ routes = [
   Route('/', InicioSesion),
   Route('/avisoPrivacidad', AvisoPrivacidad),
   Route('/terminosyCondiciones', TerminosYCondiciones),
+  Route('/calendario/<calendario:(\d+)>/',calendarioHandler),
   Route('/profile',gruposHandler, name="profile"),
   Route('/logout', handler='handlers.AuthHandler:logout', name='logout'),
   Route('/auth/<provider>',handler='handlers.AuthHandler:_simple_auth', name='auth_login'),

@@ -50,6 +50,9 @@
     <Compile Include="landing\auth\handlers.py" />
     <Compile Include="landing\auth\secrets.py" />
     <Compile Include="landing\auth\__init__.py" />
+    <Compile Include="landing\core\calendarios.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="landing\core\grupos.py" />
     <Compile Include="landing\core\Privacidad.py" />
     <Compile Include="landing\core\__init__.py" />
@@ -170,6 +173,7 @@
     <Content Include="landing\static\video\beach-soccer.ogv" />
     <Content Include="landing\static\video\beach-soccer.webm" />
     <Content Include="landing\templates\avisoprivacidad.html" />
+    <Content Include="landing\templates\calendario.html" />
     <Content Include="landing\templates\error.html" />
     <Content Include="landing\templates\index.html" />
     <Content Include="landing\templates\layout.html" />

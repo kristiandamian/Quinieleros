@@ -11,7 +11,7 @@
                     <span class="card-title" data-bind="text:Nombre"></span>
                 </div>
                 <div class="card-action">
-                    <a href="#">Ver grupo</a>
+                    <a  data-bind="attr: {href:  'calendario/' + key + '/' }">Ver grupo</a>
                 </div>
             </div>
         </div>
@@ -83,12 +83,12 @@
                 <label>Liga</label>
             </div>
             <div class="input-field col s12">
-                <input placeholder="Nombre original!" id="name" type="text" class="validate">
+                <input placeholder="Nombre original!" id="name" type="text" class="validate"  data-bind="value : nombre">
                 <label for="name">Nombre del grupo</label>
             </div>
             <div class="input-field col s12">
-                <input placeholder="Correos separados por coma" id="first_name" type="text" class="validate">
-                <label for="first_name">Invitados</label>
+                <input placeholder="Correos separados por coma" id="correos" type="text" class="validate" data-bind="value : correos">
+                <label for="correos">Invitados</label>
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@
         setTimeout(function(){
             modelo.ObtenerGrupos("{{ user.email }}", "{{ user.name }}");
             modelo.ObtenerLigas();
-        }, 2000)
+        }, 3000)
 
         {% endif %}
 

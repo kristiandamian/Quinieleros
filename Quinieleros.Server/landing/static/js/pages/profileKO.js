@@ -6,6 +6,7 @@ var modeloProfile = function () {
     var self = this;
     self.usuario = ko.observable();
     self.nombre = ko.observable();
+    self.correos = ko.observable();
     self.grupos = ko.observableArray();
     self.liga = ko.observable();
     self.ligas = ko.observableArray();
@@ -48,7 +49,16 @@ var modeloProfile = function () {
         self.calendarios(calendarios);
         $("#loading").hide();
     }
-    self.addGrupo = function () {
 
+    self.addGrupo = function () {
+        $("#loading").show();
+        save_grupo(self.nombre(), self.correos(), self.calendario().key(), self.addGrupoCallback);
+    }
+    self.addGrupoCallback=function(resp)
+    {
+        $("#loading").hide();
+        if (resp.error)
+            Materialize.toast(resp.mensaje, 5000);
+            //
     }
 }
