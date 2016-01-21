@@ -10,14 +10,14 @@ from google.appengine.ext import ndb
 from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
 from core.ligas import buscar_ligas
 from core.calendarios import buscar_calendarios
-from core.jornadas import buscar_jornada
+from core.jornadas import buscar_jornada, buscar_jornadas
 from core.resultados import guardar_resultados, obtener_resultados_grupo
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import LigasMessage,LigasMessageCollection
 from endpointsModels import CalendarioMessage, CalendarioMessageCollection, NumeroJornadaMessageCollection
 from endpointsModels import JornadaMessage, PartidoMessage
 from endpointsModels import Resultados, Resultado, ResultadoGrupo
-from endpointsModels import GRUPO_GET_REQUEST, JORNADA_GET_REQUEST
+from endpointsModels import GRUPO_GET_REQUEST, JORNADA_GET_REQUEST, JORNADA_MIN_GET_REQUEST
 
 package = 'Quinieleros'
 
@@ -56,14 +56,14 @@ class QuinielerosApi(remote.Service):
     def get_calendarios(self, request):
         return buscar_calendarios(request)
     #######################    JORNADAS    #######################
-    @endpoints.method(JORNADA_GET_REQUEST, NumeroJornadaMessageCollection,
-                  path='jornadas/{calendariokey}/', http_method='GET',
+    @endpoints.method(JORNADA_MIN_GET_REQUEST, NumeroJornadaMessageCollection,
+                  path='jornadas/{grupokey}', http_method='GET',
                   name='obtener_jornadas')
     def get_jornadas(self, request):
         return buscar_jornadas(request)
 
     @endpoints.method(JORNADA_GET_REQUEST, JornadaMessage,
-                  path='ligas/{calendariokey}/{jornada}/{usuario}/', http_method='GET',
+                  path='ligas/{calendariokey}/{jornada}/{usuario}', http_method='GET',
                   name='obtener_jornada')
     def get_jornada(self, request):
         return buscar_jornada(request)
@@ -75,7 +75,7 @@ class QuinielerosApi(remote.Service):
         return guardar_resultados(request)
 
     @endpoints.method(GRUPO_GET_REQUEST, ResultadoGrupo,
-                  path='resultados/{grupoKey}/', http_method='GET',
+                  path='resultados/{grupoKey}', http_method='GET',
                   name='obtener_resultados_grupo')
     def obtener_resultados_grupo(self, request):
         return buscar_jornada(request)

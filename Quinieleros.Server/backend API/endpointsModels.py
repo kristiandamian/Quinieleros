@@ -101,6 +101,11 @@ JORNADA_GET_REQUEST = endpoints.ResourceContainer(
     usuario=messages.StringField(4),
 )
 
+JORNADA_MIN_GET_REQUEST = endpoints.ResourceContainer(
+    message_types.VoidMessage,
+    grupokey=messages.StringField(1),
+)
+
 RESULTADO_GET_REQUEST = endpoints.ResourceContainer(
     message_types.VoidMessage,
     calendariokey=messages.StringField(1),

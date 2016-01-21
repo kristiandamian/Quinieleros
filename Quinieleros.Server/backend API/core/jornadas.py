@@ -1,6 +1,7 @@
 import sys
 import os
 import endpoints
+from datetime import datetime
 from protorpc import messages
 from protorpc import message_types
 from protorpc import remote
@@ -46,14 +47,17 @@ def buscar_jornada(request):
     return jm
 
 def buscar_jornadas(request):
-    jornada=Jornada.query(calendario == request.calendariokey)
+    grupo=Grupo.get_by_id(int(request.grupokey))
+
     jornadas = []
-    if jornada!=None:
-        for j in jornada:
-            jm = NumeroJornadaMessage()
-            jm.Abierta=j.abierto
-            jm.Nombre=j.Nombre
-            jm.Numero=j.Numero
-            jornadas.append(jm)
-    respuesta=GrupoMessageCollection(jornadas=jornadas)
+    if grupo!=None:
+        jornada=Jornada.query(Jornada.calendario == grupo.calendario)
+        if jornada!=None:
+            for j in jornada:
+                jm = NumeroJornadaMessage()
+                jm.Abierta=j.abierto
+                jm.Nombre="J"+str(j.Numero)#j.Nombre
+                jm.Numero=j.Numero
+                jornadas.append(jm)
+    respuesta=NumeroJornadaMessageCollection(jornadas=jornadas)
     return respuesta

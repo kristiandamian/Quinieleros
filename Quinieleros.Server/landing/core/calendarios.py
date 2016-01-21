@@ -11,12 +11,12 @@ from lib.simpleauth import SimpleAuthHandler
 from auth.handlers import BaseRequestHandler
 
 class calendarioHandler(BaseRequestHandler):
-  def get(self, calendario):
+  def get(self, grupo):
     """Handles GET /profile"""
     if self.logged_in:
       self.render('calendario.html', {
         'user': self.current_user,
-        'calendario': calendario,
+        'grupo': grupo,
         'session': self.auth.get_user_by_session()
       })
     else:

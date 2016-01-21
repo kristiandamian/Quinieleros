@@ -78,6 +78,7 @@
     <Content Include="landing\static\css\bootstrap.css" />
     <Content Include="landing\static\css\bootstrap.min.css" />
     <Content Include="landing\static\css\buttons.css" />
+    <Content Include="landing\static\css\calendario.css" />
     <Content Include="landing\static\css\general.css" />
     <Content Include="landing\static\css\materialize.css" />
     <Content Include="landing\static\css\materialize.min.css" />

@@ -43,7 +43,7 @@ routes = [
   Route('/', InicioSesion),
   Route('/avisoPrivacidad', AvisoPrivacidad),
   Route('/terminosyCondiciones', TerminosYCondiciones),
-  Route('/calendario/<calendario:(\d+)>/',calendarioHandler),
+  Route('/calendario/<grupo:(\d+)>/',calendarioHandler),
   Route('/profile',gruposHandler, name="profile"),
   Route('/logout', handler='handlers.AuthHandler:logout', name='logout'),
   Route('/auth/<provider>',handler='handlers.AuthHandler:_simple_auth', name='auth_login'),
