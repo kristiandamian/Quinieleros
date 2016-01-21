@@ -3,9 +3,10 @@
         {
             "grupoKey": usuario
         }).execute(function (resp) {
-            console.log(resp.result.grupos);
+            var data = resp.result != undefined ? resp.result.grupos : null;
+            console.log(data);
             if (callback)
-                callback(resp.result.grupos);
+                callback(data);
         });
 }
 

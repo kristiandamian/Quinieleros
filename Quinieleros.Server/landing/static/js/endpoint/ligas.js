@@ -1,8 +1,9 @@
 ﻿get_ligas = function (callback) {
     gapi.client.quinieleros.obtener_todas_las_ligas({
     }).execute(function (resp) {
-            console.log(resp.result.ligas);
-            if (callback)
-                callback(resp.result.ligas);
-        });
+        var data = resp.result != undefined ? resp.result.ligas : null;
+        console.log(data);
+        if (callback)
+            callback(data);
+    });
 }

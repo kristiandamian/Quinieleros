@@ -16,6 +16,7 @@ class calendarioHandler(BaseRequestHandler):
     if self.logged_in:
       self.render('calendario.html', {
         'user': self.current_user,
+        'calendario': calendario,
         'session': self.auth.get_user_by_session()
       })
     else:

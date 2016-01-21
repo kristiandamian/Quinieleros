@@ -6,7 +6,7 @@
 <div style="text-align: center">
     <div class="row" data-bind='foreach: grupos' >
         <div class="col s12 m6">
-            <div class="card blue-grey  darken-1">
+            <div class="card big blue-grey  darken-1">
                 <div class="card-content white-text">
                     <span class="card-title" data-bind="text:Nombre"></span>
                 </div>
@@ -48,7 +48,7 @@
     </div>
 </div>
 <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;" id="addGrupo">
-    <a class="btn-floating btn-large waves-effect waves-light yellow modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light  modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
 </div>
 
 <!-- Modal Structure -->
@@ -111,15 +111,17 @@
         {% if logged_in %}
         modelo = new modeloProfile();
         ko.applyBindings(modelo);
-        setTimeout(function(){
-            modelo.ObtenerGrupos("{{ user.email }}", "{{ user.name }}");
-            modelo.ObtenerLigas();
-        }, 3000)
+        
 
         {% endif %}
 
         $('.modal-trigger').leanModal();
         $("select").material_select();
     });
+    function postInit()
+    {
+        modelo.ObtenerGrupos("{{ user.email }}", "{{ user.name }}");
+        modelo.ObtenerLigas();
+    }
 </script>
     {% endblock %}

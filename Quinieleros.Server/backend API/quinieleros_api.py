@@ -14,7 +14,7 @@ from core.jornadas import buscar_jornada
 from core.resultados import guardar_resultados, obtener_resultados_grupo
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import LigasMessage,LigasMessageCollection
-from endpointsModels import CalendarioMessage, CalendarioMessageCollection
+from endpointsModels import CalendarioMessage, CalendarioMessageCollection, NumeroJornadaMessageCollection
 from endpointsModels import JornadaMessage, PartidoMessage
 from endpointsModels import Resultados, Resultado, ResultadoGrupo
 from endpointsModels import GRUPO_GET_REQUEST, JORNADA_GET_REQUEST
@@ -56,8 +56,14 @@ class QuinielerosApi(remote.Service):
     def get_calendarios(self, request):
         return buscar_calendarios(request)
     #######################    JORNADAS    #######################
+    @endpoints.method(JORNADA_GET_REQUEST, NumeroJornadaMessageCollection,
+                  path='jornadas/{calendariokey}/', http_method='GET',
+                  name='obtener_jornadas')
+    def get_jornadas(self, request):
+        return buscar_jornadas(request)
+
     @endpoints.method(JORNADA_GET_REQUEST, JornadaMessage,
-                  path='ligas/{ligaKey}/{calendariokey}/{jornada}/{usuario}/', http_method='GET',
+                  path='ligas/{calendariokey}/{jornada}/{usuario}/', http_method='GET',
                   name='obtener_jornada')
     def get_jornada(self, request):
         return buscar_jornada(request)

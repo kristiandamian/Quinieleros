@@ -2,8 +2,9 @@
     gapi.client.quinieleros.obtener_calendarios_de_una_liga({
             "grupoKey": liga
     }).execute(function (resp) {
-        console.log(resp.result.calendarios);
+        var data = resp.result != undefined ? resp.result.calendarios : null;
+        console.log(data);
         if (callback)
-            callback(resp.result.calendarios);
+            callback(data);
     });
 }

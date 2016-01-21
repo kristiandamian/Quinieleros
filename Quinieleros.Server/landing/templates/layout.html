@@ -129,11 +129,11 @@
             $("#loading").hide();
             var ROOT = 'https://quinieleros-api.appspot.com/_ah/api';
             
-            gapi.client.load('quinieleros', 'v1', null, ROOT);
+            gapi.client.load('quinieleros', 'v1', postInit, ROOT);
             $(".button-collapse").sideNav();
         };
    
-       
+        
     </script>
     <script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
     <script>

@@ -158,9 +158,11 @@
     <Content Include="landing\static\js\contact_me.js" />
     <Content Include="landing\static\js\endpoint\calendarios.js" />
     <Content Include="landing\static\js\endpoint\grupos.js" />
+    <Content Include="landing\static\js\endpoint\jornadas.js" />
     <Content Include="landing\static\js\endpoint\ligas.js" />
     <Content Include="landing\static\js\jqBootstrapValidation.js" />
     <Content Include="landing\static\js\jquery.js" />
+    <Content Include="landing\static\js\pages\calendarioKO.js" />
     <Content Include="landing\static\js\pages\profileKO.js" />
     <Content Include="landing\static\less\agency.less" />
     <Content Include="landing\static\less\mixins.less" />

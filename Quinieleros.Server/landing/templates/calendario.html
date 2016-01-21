@@ -3,7 +3,35 @@
 
 {% endblock %}
 {% block main %}
+
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs" data-bind="foreach: jornadas,
+                                    optionsAfterRender: function (option, item) {
+                                                             setTimeout(function() {
+                                                                 $('ul.tabs').tabs();
+                                                             }, 0);">
+         <li class="tab col s3"><a href="#tab1" data-bind="text: Nombre"></a></li>
+           
+        </ul>
+    </div>
+    <div id="tab1" class="col s12">aqui van los partidos</div>
+</div>
+
 {% endblock %}
 
 {% block scripts %}
+<script src="/js/pages/calendarioKO.js"></script>
+<script src="/js/endpoint/jornadas.js"></script>
+<script type="text/javascript">
+    var modelo;
+    $(function () {
+        modelo = new modeloCalendario();
+        ko.applyBindings(modelo);
+        modelo.calendario({{ calendario }})
+    });
+    function postInit() {
+        modelo.ObtenerJornadas();
+    }
+</script>
 {% endblock %}

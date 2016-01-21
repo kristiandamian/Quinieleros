@@ -62,6 +62,14 @@ class JornadaMessage(messages.Message):
     key = messages.StringField(2)
     partidos = messages.MessageField(PartidoMessage, 3, repeated=True)
 
+class NumeroJornadaMessage(messages.Message):
+    Numero = messages.IntegerField(1)
+    Nombre = messages.StringField(2)
+    Abierta = messages.BooleanField(3)
+
+class NumeroJornadaMessageCollection(messages.Message):
+    jornadas = messages.MessageField(NumeroJornadaMessage, 1, repeated=True)
+
 class Resultado(messages.Message):
     partido = messages.StringField(1)
     resultado = messages.EnumField('ResultadosPartido', 2)
@@ -88,7 +96,6 @@ GRUPO_GET_REQUEST = endpoints.ResourceContainer(
 
 JORNADA_GET_REQUEST = endpoints.ResourceContainer(
     message_types.VoidMessage,
-    ligaKey=messages.StringField(1),
     calendariokey=messages.StringField(2),
     jornada=messages.StringField(3),
     usuario=messages.StringField(4),
