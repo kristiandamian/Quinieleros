@@ -71,6 +71,7 @@
     <Content Include="backend API\app.yaml" />
     <Content Include="landing\app.yaml" />
     <Content Include="landing\favicon.ico" />
+    <Content Include="landing\helpers\webscrapper cheatsheet.txt" />
     <Content Include="landing\index.yaml" />
     <Content Include="landing\lib\httplib2\cacerts.txt" />
     <Content Include="landing\static\css\agency.css" />
@@ -289,6 +290,7 @@
     <Folder Include="landing\lib\httplib2" />
     <Folder Include="landing\lib\oauth2" />
     <Folder Include="landing\lib\simpleauth" />
+    <Folder Include="landing\helpers\" />
     <Folder Include="landing\static\" />
     <Folder Include="landing\static\css" />
     <Folder Include="landing\static\font-awesome\" />
