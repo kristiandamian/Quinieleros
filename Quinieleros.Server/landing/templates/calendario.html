@@ -4,7 +4,7 @@
 {% endblock %}
 {% block main %}
 
-<div class="row" style="text-align:center">
+<div class="row" >
     <div class="col s12">
         <ul class="tabs" data-bind="foreach: jornadas">
          <li class="tab col s3"><a href="#tab1" data-bind="text: Nombre, attr : { href : '#'+Nombre }, event: {click: $root.ObtengoPartidos }"></a></li>
@@ -23,15 +23,35 @@
                             
                         </div>
                         <div class="card-action">
-                            <a href="#">Local</a>
-                            <a href="#">Empate</a>
-                            <a href="#">Visitante</a>
+                            <a href="#" data-bind="click : $root.MarcoSeleccionado"> Local</a>
+                            <a href="#" data-bind="click : $root.MarcoSeleccionado">Empate</a>
+                            <a href="#" data-bind="click : $root.MarcoSeleccionado">Visitante</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--
+        PARA RESULTADOS CORRECTOS O INCORRECTOS
+        <i class="material-icons imgbotoncard">thumb_up</i>
+        <i class="material-icons imgbotoncard">thumb_down</i>
+
+        PARA RESULTADO SELECCIONADO
+        <i class="material-icons imgbotoncard seleccionado">done</i>
+    -->
+    <div class="fixed-action-btn horizontal" id="menuflotante" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating teal tooltipped " data-position="top" data-delay="50" data-tooltip="Mis Estadisticas"><i class="material-icons">trending_up</i></a></li>
+            <li><a href="/profile" class="btn-floating teal tooltipped"  data-position="top" data-delay="50" data-tooltip="Mis Grupos"><i class="material-icons">supervisor_account</i></a></li>
+            <li><a class="btn-floating teal tooltipped"  data-position="top" data-delay="50" data-tooltip="grabar estos resultados para todos mis grupos"><i class="material-icons">done_all</i></a></li>
+            <li><a class="btn-floating teal tooltipped"  data-position="top" data-delay="50" data-tooltip="Grabar resultados para este grupo"><i class="material-icons">done</i></a></li>
+        </ul>
+    </div>
+
 </div>
 
 {% endblock %}
@@ -42,6 +62,7 @@
 <script type="text/javascript">
     var modelo;
     $(function () {
+        $("#menuflotante").css("bottom",document.getElementById('footer').offsetHeight + 10);
         modelo = new modeloCalendario();
         ko.applyBindings(modelo);
         modelo.usuario('{{user.email}}');

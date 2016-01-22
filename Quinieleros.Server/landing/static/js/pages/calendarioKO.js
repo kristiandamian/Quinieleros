@@ -43,4 +43,18 @@ var modeloCalendario = function () {
         }
         $("#loading").hide();
     }
+
+    self.MarcoSeleccionado = function(data, btn)
+    {
+        
+        var _this = $(event.target);
+        console.log($(_this));
+        
+        $(_this).parent().find(".seleccionado").remove();
+        
+        var html = '<i class="material-icons imgbotoncard seleccionado">done</i>'
+        $(_this).before(html);
+
+       // $($("a")[45]).before('<i class="material-icons imgbotoncard seleccionado">done</i>')
+    }
 }

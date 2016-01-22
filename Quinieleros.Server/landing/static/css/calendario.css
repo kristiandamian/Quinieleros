@@ -10,3 +10,10 @@ li{
 {
     box-sizing:content-box!important;
 }
+.imgbotoncard
+{
+    margin-right:2%;
+}
+.seleccionado{
+    color:darkorange;
+}
