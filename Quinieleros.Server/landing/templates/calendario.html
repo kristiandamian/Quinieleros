@@ -4,15 +4,33 @@
 {% endblock %}
 {% block main %}
 
-<div class="row">
+<div class="row" style="text-align:center">
     <div class="col s12">
         <ul class="tabs" data-bind="foreach: jornadas">
-         <li class="tab col s3"><a href="#tab1" data-bind="text: Nombre, attr : { href : '#'+Nombre }"></a></li>
+         <li class="tab col s3"><a href="#tab1" data-bind="text: Nombre, attr : { href : '#'+Nombre }, event: {click: $root.ObtengoPartidos }"></a></li>
            
         </ul>
     </div>
-    <div  data-bind="foreach: jornadas">
-        <div class="col s12" data-bind="attr : { id : Nombre }">aqui van los partidos</div>
+    <div  data-bind="foreach: jornadas" style="text-align:center">
+        <div class="col s12" data-bind="attr : { id : Nombre } ">
+            <div class="row"  data-bind="foreach: $root.partidos">
+                <div class="col s12 m4">
+                    <div class="card small blue-grey darken-1 ">
+                        <div class="card-content white-text">
+                            <span class="card-title" data-bind="text: Local.Nombre + ' vs. '+Visitante.Nombre">Card Title</span>
+                            
+                                <h2 data-bind="text:GolesLocal +'-'+ GolesVisitante" ></h2>
+                            
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Local</a>
+                            <a href="#">Empate</a>
+                            <a href="#">Visitante</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -26,6 +44,7 @@
     $(function () {
         modelo = new modeloCalendario();
         ko.applyBindings(modelo);
+        modelo.usuario('{{user.email}}');
         modelo.grupo({{ grupo }})
     });
     function postInit() {

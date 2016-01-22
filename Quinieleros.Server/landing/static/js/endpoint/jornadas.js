@@ -8,3 +8,16 @@
             callback(data);
     });
 }
+
+get_jornada = function (grupo,jornada,usuario, callback) {
+    gapi.client.quinieleros.obtener_jornada({
+        "grupokey": grupo,
+        "jornada": jornada,
+        "usuario": usuario, 
+    }).execute(function (resp) {
+        var data = resp.result;
+        console.log(data);
+        if (callback)
+            callback(data);
+    });
+}

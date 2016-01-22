@@ -9,6 +9,17 @@ from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessag
 from endpointsModels import GRUPO_GET_REQUEST
 from models import Grupo, Usuario, Calendario
 
+
+import os
+import pprint
+import time
+from datetime import datetime
+from google.appengine.api import memcache
+from google.appengine.api import mail
+from google.appengine.api import urlfetch
+from google.appengine.ext import db
+from models import Grupo, Usuario, Liga, Calendario, Equipo, Jornada, Partido
+
 def grabar_grupo(grupo):
     usrs=[]
     error=False

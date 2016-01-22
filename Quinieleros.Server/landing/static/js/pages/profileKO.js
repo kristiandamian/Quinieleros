@@ -24,8 +24,8 @@ var modeloProfile = function () {
 
     self.ObtenerGruposCallback = function (grupos) {
         self.grupos(grupos);
-        console.log(self.grupos().length <= 0);
-        var mostrar = self.grupos().length <= 0;
+        
+        var mostrar = self.grupos()==undefined || self.grupos().length <= 0;
         self.MostrarNoGrupos(mostrar);
         $("#loading").hide();
     }

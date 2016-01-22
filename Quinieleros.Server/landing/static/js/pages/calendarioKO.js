@@ -4,7 +4,9 @@ var modeloCalendario = function () {
     var self = this;
 
     self.grupo = ko.observable();
+    self.usuario = ko.observable();
     self.jornadas = ko.observableArray();
+    self.partidos = ko.observableArray();
 
     /// FUNCIONES
 
@@ -18,10 +20,27 @@ var modeloCalendario = function () {
         
         $("#loading").hide();
         $('ul.tabs').tabs();
+        self.ObtengoPartidosApi(self.grupo(), 1, self.usuario());
     }
 
     self.ObtengoPartidos = function(parent)
     {
-        console.log(parent);
+        self.ObtengoPartidosApi(self.grupo(), parseInt(parent.Numero), self.usuario());
+    }
+
+    self.ObtengoPartidosApi = function (grupo, jornada, usuario)
+    {
+        $("#loading").show();
+        get_jornada(grupo, jornada, usuario, self.ObtengoPartidosApiCallback);
+    }
+
+    self.ObtengoPartidosApiCallback = function(jornada)
+    {
+        if(jornada!=undefined)
+        {
+            console.log(jornada);
+            self.partidos(jornada.partidos);
+        }
+        $("#loading").hide();
     }
 }

@@ -6,3 +6,7 @@ li{
     font-size:smaller !important;
     min-width: 0px !important;
 }
+*,*:before,*:after
+{
+    box-sizing:content-box!important;
+}

@@ -71,15 +71,15 @@ def calculoResultado(golesLocal, golesVisitante):
     return respuesta
 
 def es_acierto(usuario,partido, golesLocal, golesVisitante):
-    usuario=Usuario.get_by_id(request.correo)
+    usuario=Usuario.get_by_id(usuario)
     respuesta=False
     _resultado_oficial=calculoResultado(golesLocal, golesVisitante)
     if usuario!=None:
-        match=Partido.get_by_id(match.partido)
+        match=Partido.get_by_id(partido.key.id())
         if match!=None:
-            res=ResultadoQuiniela.query(ResultadoQuiniela.partido == match, ResultadoQuiniela.usuario == usuario)
+            res=ResultadoQuiniela.query(ResultadoQuiniela.partido == match.key, ResultadoQuiniela.usuario == usuario.key)
+            res=res.get()
             if res!=None:
-                res=res.get()
                 if res.resultado!="NO_ESPECIFICADO":
                    acierto = res.resultado==_resultado_oficial
                    if res.acierto==None:

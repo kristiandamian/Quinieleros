@@ -63,7 +63,7 @@ class QuinielerosApi(remote.Service):
         return buscar_jornadas(request)
 
     @endpoints.method(JORNADA_GET_REQUEST, JornadaMessage,
-                  path='ligas/{calendariokey}/{jornada}/{usuario}', http_method='GET',
+                  path='ligas/{grupokey}/{jornada}/{usuario}', http_method='GET',
                   name='obtener_jornada')
     def get_jornada(self, request):
         return buscar_jornada(request)

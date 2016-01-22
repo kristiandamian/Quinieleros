@@ -96,7 +96,7 @@ GRUPO_GET_REQUEST = endpoints.ResourceContainer(
 
 JORNADA_GET_REQUEST = endpoints.ResourceContainer(
     message_types.VoidMessage,
-    calendariokey=messages.StringField(2),
+    grupokey=messages.StringField(2),
     jornada=messages.StringField(3),
     usuario=messages.StringField(4),
 )
