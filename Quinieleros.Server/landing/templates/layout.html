@@ -1,11 +1,13 @@
 ﻿<!doctype html>
 <html>
     <head>
-
+        <title>Quinieleros</title>
         <!--MOCOS-->
         <meta charset="utf-8">
-        <title>Quinieleros</title>
         <meta name="author" content="kristian damian">
+        <meta name="description" content="Sitio para la administración de quinielas, gratis, para la liga de Mexico" />
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <!--CSS-->
         <link rel="stylesheet" href="/css/general.css">
         <link rel="stylesheet" href="/css/block.css">
         <!--Import Google Icon Font-->
@@ -31,7 +33,7 @@
                         <li><a href="grupos">Mis grupos</a></li>
                         <li><a href="estadisticas">Mis estadisticas</a></li>
                         
-                        <li><a href="logout">logout</a></li>
+                        <li><a href="/logout">logout</a></li>
                         {% if user %}
                         <li><img src="{{ user.avatar_url }}" class="avatar circular"></li>
                         {% endif %}
@@ -54,7 +56,7 @@
                                 <div class="col col s8 m8 l8">
                                     {% if logged_in %}
                                     <p class="darken-2 username">{{ user.name }}</p>
-                                    <a href="logout" class="logout">logout</a>
+                                    <a href="/logout" class="logout">logout</a>
                                     {% endif %}
                                 </div>
                             </div>

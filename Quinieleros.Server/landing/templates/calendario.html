@@ -4,7 +4,7 @@
 {% endblock %}
 {% block main %}
 
-<div class="row" >
+<div class="row" id="maindiv">
     <div class="col s12">
         <ul class="tabs" data-bind="foreach: jornadas">
          <li class="tab col s3"><a href="#tab1" data-bind="text: Nombre, attr : { href : '#'+Nombre }, event: {click: $root.ObtengoPartidos }"></a></li>
@@ -62,7 +62,6 @@
 <script type="text/javascript">
     var modelo;
     $(function () {
-        $("#menuflotante").css("bottom",document.getElementById('footer').offsetHeight + 10);
         modelo = new modeloCalendario();
         ko.applyBindings(modelo);
         modelo.usuario('{{user.email}}');
