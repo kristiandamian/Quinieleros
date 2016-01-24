@@ -31,6 +31,7 @@ def buscar_jornada(request):
                     partido.resultado = calculoResultado(p.GolesLocal, p.GolesVisitante)
                     partido.GolesLocal=p.GolesLocal
                     partido.GolesVisitante=p.GolesVisitante
+                    partido.jornadaAbierta=jornada.abierto
                     local= EquipoMessage()
                     l=Equipo.get_by_id(p.Local.id())
                     if l!=None:

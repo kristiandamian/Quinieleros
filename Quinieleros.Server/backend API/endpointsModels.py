@@ -56,6 +56,7 @@ class PartidoMessage(messages.Message):
     resultado=messages.StringField(8)  
     GolesLocal = messages.IntegerField(9) 
     GolesVisitante = messages.IntegerField(19) 
+    jornadaAbierta = messages.BooleanField(20) 
 
 class JornadaMessage(messages.Message):
     Nombre = messages.StringField(1)
