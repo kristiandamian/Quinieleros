@@ -12,28 +12,41 @@ from models import Grupo, Usuario, Calendario, Liga, Equipo, Partido, Jornada, R
 
 
 def guardar_resultados(request):
+    grabar(request,False)
+
+def guardar_resultados_todos_grupos(request):
+    grabar(request,True)
+
+def grabar(request, todos_los_grupos):
     calendario=Calendario.get_by_id(request.calendariokey)
     respuesta=BooleanMessage()
     if calendario!=None:
         usuario=Usuario.get_by_id(request.correo)
         if usuario!=None:
-            for match in request.resultados:
-                partido=Partido.get_by_id(match.partido)
-                if partido!=None:
-                    _key=partido.Local.id()+"vs"+partido.Visitante.id()+calendario.key.id()
-                    res=ResultadoQuiniela.get_or_insert(_key)
-                    res.usuario=usuario.key
-                    res.partido=partido.key
-                    res.resultado=match.resultado
-                    res.put()
-        else:
-            respuesta.error=True
-            respuesta.mensaje="No esta registrado el usuario "+request.correo
+            if todos_los_grupos:
+                grupos=Grupo.query(Grupo.usuarios == request.correo)
+            else:
+                grupo=Grupo.get_by_id(request.grupo)
+                grupos=[]
+                grupos.append(grupo)
+            for grupo in grupos:
+                for match in request.resultados:
+                    partido=Partido.get_by_id(match.partido)
+                    if partido!=None:
+                        _key=partido.Local.id()+"vs"+partido.Visitante.id()+calendario.key.id()
+                        res=ResultadoQuiniela.get_or_insert(_key)
+                        res.usuario=usuario.key
+                        res.partido=partido.key
+                        res.resultado=match.resultado
+                        res.grupo=grupo.key
+                        res.put()
+                else:
+                    respuesta.error=True
+                    respuesta.mensaje="No esta registrado el grupo "+request.grupo
     else:
         respuesta.error=True
         respuesta.mensaje="No existe el calendario"
     return respuesta
-
 
 def obtener_resultados_grupo(request):
     grupo=Grupo.get_by_id(request.grupoKey) 
@@ -49,7 +62,7 @@ def obtener_resultados_grupo(request):
                 resultado.nombre=Usuario.get_by_id(usr.key.id()).Nombre
                 resultado.usuario=usr.key.id()
                 for p in partidos:
-                    res = ResultadoQuiniela.query(ResultadoQuiniela.partido == p.key, usuario = usr)
+                    res = ResultadoQuiniela.query(ResultadoQuiniela.partido == p.key, usuario == usr, ResultadoQuiniela.grupo == grupo.key)
                     for r in res:
                         if r.acierto:
                             resultado.aciertos = resultado.aciertos+1
@@ -85,4 +98,4 @@ def es_acierto(usuario,partido, golesLocal, golesVisitante):
                    if res.acierto==None:
                         res.acierto=acierto
                         res.put()
-    return respuesta
+    return respuesta #715 38 29 

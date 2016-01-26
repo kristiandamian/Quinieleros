@@ -53,6 +53,7 @@ class Partido(ndb.Model):
 class ResultadoQuiniela(ndb.Model):
     usuario = ndb.KeyProperty(kind="Usuario")
     partido = ndb.KeyProperty(kind="Partido")
+    grupo = ndb.KeyProperty(kind="Grupo")
     resultado = ndb.StringProperty(default="NO_ESPECIFICADO")
     acierto = ndb.BooleanProperty()
     registro = ndb.DateProperty(auto_now_add=True)

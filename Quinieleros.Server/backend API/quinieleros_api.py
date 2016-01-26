@@ -11,7 +11,7 @@ from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
 from core.ligas import buscar_ligas
 from core.calendarios import buscar_calendarios
 from core.jornadas import buscar_jornada, buscar_jornadas
-from core.resultados import guardar_resultados, obtener_resultados_grupo
+from core.resultados import guardar_resultados, guardar_resultados_todos_grupos, obtener_resultados_grupo
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import LigasMessage,LigasMessageCollection
 from endpointsModels import CalendarioMessage, CalendarioMessageCollection, NumeroJornadaMessageCollection
@@ -73,6 +73,13 @@ class QuinielerosApi(remote.Service):
                   name='guardar_resultados')
     def save_resultados(self, request):
         return guardar_resultados(request)
+
+
+    @endpoints.method(Resultados, BooleanMessage,
+                  path='resultados/todos', http_method='POST',
+                  name='guardar_resultados_todos_grupos')
+    def save_resultados(self, request):
+        return guardar_resultados_todos_grupos(request)
 
     @endpoints.method(GRUPO_GET_REQUEST, ResultadoGrupo,
                   path='resultados/{grupoKey}', http_method='GET',

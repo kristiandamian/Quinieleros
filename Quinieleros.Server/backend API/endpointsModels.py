@@ -79,6 +79,7 @@ class Resultados(messages.Message):
     calendariokey=messages.StringField(1)
     resultados = messages.MessageField(Resultado, 2, repeated=True)
     correo = messages.StringField(3)
+    grupo = messages.IntegerField(4)
 
 class ResultadoGrupoJornada(messages.Message):
     jornada=messages.StringField(1)
