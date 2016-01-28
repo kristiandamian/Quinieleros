@@ -1,3 +1,21 @@
+@media screen and (orientation: portrait)
+{
+    .card { 
+        background-image:url(/img/planding.jpg); 
+        background-size:cover;
+        -webkit-background-origin:border-box;
+
+    }
+}
+@media screen and (orientation: landscape)
+{
+    .card { 
+        background-image:url(/img/llanding.jpg); 
+        background-size:cover;
+        -webkit-background-origin:border-box;
+    }
+}
+
 /* =============================================== *\
 	HTML5 VIDEO BACKGROUND
 	This is the important part

@@ -1,0 +1,16 @@
+.promo-caption {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+.light {
+    font-weight: 300;
+}
+.topSection{
+	margin-top:15%;
+}

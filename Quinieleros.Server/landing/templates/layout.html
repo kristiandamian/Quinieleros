@@ -21,13 +21,13 @@
         {% block headerstuff %}{% endblock %}
     </head>
 <body>
-    <header>
+    <header id="header">
         <div class="navbar-fixed ">
             <nav>
                 <div class="nav-wrapper">
 					<div class="valign-wrapper">
 						<a href="#" class="brand-logo" style="height:100%">
-						<img class="responsive-img logo"  src="img/logo.jpg" />
+						<img class="responsive-img logo"  src="img/logo.jpg" id="logo" />
 					<p class="valign logoTexto" >Quinieleros</p></a>
 					</div>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -138,8 +138,11 @@
             gapi.client.load('quinieleros', 'v1', postInit, ROOT);
             $(".button-collapse").sideNav();
         };
-   
-        
+        $(function () {
+
+            $("#logo").css("height", document.getElementById('header').offsetHeight);
+            $("#logo").css("width", document.getElementById('header').offsetHeight);
+        });
     </script>
     <script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
     <script>
