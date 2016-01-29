@@ -13,6 +13,7 @@ from auth.secrets import SESSION_KEY
 from auth.handlers import InicioSesion
 from core.grupos import gruposHandler
 from core.calendarios import calendarioHandler
+from core.estadisticas import estadisticasHandler
 from core.Privacidad import AvisoPrivacidad, TerminosYCondiciones
 import logging
 
@@ -39,11 +40,12 @@ app_config = {
   }
 }
 #manejo de rutas de la app
-routes = [
+routes = [   
   Route('/', InicioSesion),
   Route('/avisoPrivacidad', AvisoPrivacidad),
   Route('/terminosyCondiciones', TerminosYCondiciones),
   Route('/calendario/<grupo:(\d+)>/',calendarioHandler),
+  Route('/estadisticas/<grupo:(\d+)>/',estadisticasHandler),
   Route('/profile',gruposHandler, name="profile"),
   Route('/logout', handler='handlers.AuthHandler:logout', name='logout'),
   Route('/auth/<provider>',handler='handlers.AuthHandler:_simple_auth', name='auth_login'),

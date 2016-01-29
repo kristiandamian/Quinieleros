@@ -73,6 +73,9 @@
     <Compile Include="landing\core\calendarios.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="landing\core\estadisticas.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="landing\core\grupos.py" />
     <Compile Include="landing\core\Privacidad.py" />
     <Compile Include="landing\core\__init__.py" />
@@ -190,6 +193,7 @@
     <Content Include="landing\static\js\jqBootstrapValidation.js" />
     <Content Include="landing\static\js\jquery.js" />
     <Content Include="landing\static\js\pages\calendarioKO.js" />
+    <Content Include="landing\static\js\pages\estadisticasKO.js" />
     <Content Include="landing\static\js\pages\profileKO.js" />
     <Content Include="landing\static\less\agency.less" />
     <Content Include="landing\static\less\mixins.less" />
@@ -204,6 +208,7 @@
     <Content Include="landing\templates\avisoprivacidad.html" />
     <Content Include="landing\templates\calendario.html" />
     <Content Include="landing\templates\error.html" />
+    <Content Include="landing\templates\estadisticas.html" />
     <Content Include="landing\templates\index.html" />
     <Content Include="landing\templates\layout.html" />
     <Content Include="landing\templates\profile.html" />

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block headerstuff %}
+{% endblock %}
+
+{% block main %}
+<div class="container">
+
+    <div class="row">
+        <div class="col s12">
+            <h1 data-bind="NombreGrupo">Estadisticas del grupo </h1>
+
+            <h4 data-bind="NombreJornada">Jornada</h4>
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th data-bind="Nombre">Jugador</th>
+                        <th data-bind="Aciertos">Aciertos</th>
+                        <th data-bind="Aciertos">Detalle</th>
+                    </tr>
+                </thead>
+                <tbody data-bind='foreach: JornadaActual'>
+                    <tr>
+                        <td data-bind="text: Nombre"></td>
+                        <td data-bind="text: total"></td>
+                        <td>
+                            <a data-bind="click: $root.BuscarDato ">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col s12">
+            <h4 >Acumulado</h4>
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th data-bind="Nombre">Jugador</th>
+                        <th data-bind="Aciertos">Aciertos</th>
+                        <th data-bind="Aciertos">Detalle</th>
+                    </tr>
+                </thead>
+                <tbody data-bind='foreach: JornadaAcumulada'>
+                    <tr>
+                        <td data-bind="text: Nombre"></td>
+                        <td data-bind="text: total"></td>
+                        <td>
+                            <a data-bind="click: $root.BuscarDato ">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script src="js/pages/estadisticasKO.js"></script>
+<script type="text/javascript">
+    var modelo;
+    $(function () {
+        modelo = new modeloEstadisticas();
+        ko.applyBindings(modelo);
+        modelo.usuario('{{user.email}}');
+        modelo.grupo({{ grupo }});
+    });
+    function postInit() {
+        //modelo.ObtenerJornadas();
+    }
+</script>
+
+{% endblock %}
