@@ -1,0 +1,7 @@
+$($(".tournament_part")[0]).text() - liga actual
+$($(".event_round")[0]).text() - jornada actual
+$($(".event_round")[0]).nextAll() - Los partidos
+
+$($(".event_round")[0]).nextAll().slice(0,1) - partido 1
+$($(".event_round")[0]).nextAll().slice(1,2) - partido 2
+$($(".event_round")[0]).nextAll().slice(2,3) - partido 3
