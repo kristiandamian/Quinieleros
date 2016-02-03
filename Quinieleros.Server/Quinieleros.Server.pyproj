@@ -190,6 +190,7 @@
     <Content Include="landing\static\js\endpoint\jornadas.js" />
     <Content Include="landing\static\js\endpoint\ligas.js" />
     <Content Include="landing\static\js\endpoint\partidos.js" />
+    <Content Include="landing\static\js\endpoint\resultados.js" />
     <Content Include="landing\static\js\jqBootstrapValidation.js" />
     <Content Include="landing\static\js\jquery.js" />
     <Content Include="landing\static\js\pages\calendarioKO.js" />

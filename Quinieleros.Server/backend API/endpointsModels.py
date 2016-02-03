@@ -57,6 +57,8 @@ class PartidoMessage(messages.Message):
     GolesLocal = messages.IntegerField(9) 
     GolesVisitante = messages.IntegerField(19) 
     jornadaAbierta = messages.BooleanField(20) 
+    NombreUsuario = messages.StringField(21)
+    CorreoUsuario = messages.StringField(22)
 
 class JornadaMessage(messages.Message):
     Nombre = messages.StringField(1)
@@ -96,6 +98,12 @@ GRUPO_GET_REQUEST = endpoints.ResourceContainer(
     grupoKey=messages.StringField(1),
 )
 
+
+GRUPO_JORNADA_GET_REQUEST = endpoints.ResourceContainer(
+    message_types.VoidMessage,
+    grupoKey=messages.StringField(1),
+     jornada=messages.StringField(2),
+)
 JORNADA_GET_REQUEST = endpoints.ResourceContainer(
     message_types.VoidMessage,
     grupokey=messages.StringField(2),
