@@ -18,7 +18,8 @@ def guardar_resultados_todos_grupos(request):
     grabar(request,True)
 
 def grabar(request, todos_los_grupos):
-    calendario=Calendario.get_by_id(request.calendariokey)
+    grupo=Grupo.get_by_id(request.grupo)
+    calendario=Calendario.get_by_id(grupo.calendario.id())
     respuesta=BooleanMessage()
     if calendario!=None:
         usuario=Usuario.get_by_id(request.correo)
@@ -26,7 +27,6 @@ def grabar(request, todos_los_grupos):
             if todos_los_grupos:
                 grupos=Grupo.query(Grupo.usuarios == request.correo)
             else:
-                grupo=Grupo.get_by_id(request.grupo)
                 grupos=[]
                 grupos.append(grupo)
             for grupo in grupos:

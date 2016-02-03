@@ -11,10 +11,10 @@ from endpointsModels import EquipoMessage, PartidoMessage, JornadaMessage, Resul
 from models import Grupo, Usuario, Calendario, Liga, Equipo, Partido, Jornada
 
 def buscar_jornada(request):
-    buscar(request, [request.usuario])
+    return buscar(request, [request.usuario])
 
 def buscar_resultados_jornada(request):
-    buscar(request, None)
+    return buscar(request, None)
 
 
 def buscar(request, usuarios):

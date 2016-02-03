@@ -68,14 +68,70 @@ var modeloCalendario = function () {
     }
     self.ResultadosLocal = function (data, item, res) {
         var mostrar = false;
-        console.log("--------------------------------------------------");
-        console.log("1");
         if (!data.jornadaAbierta) {
-            console.log("2");
             if (data.resultado == res) {
                 mostrar = true;
             }
         }
         return mostrar;
     };
+
+    self.GuardarTodos = function () {
+        self.save(true);
+    }
+
+    self.Guardar = function () {
+        self.save(false);
+    }
+
+    self.save = function (guardarTodos) {
+        $("#loading").show();
+        var resultados = self.getResultados();
+        funcion = save_resultado;
+        if (guardarTodos)
+            funcion = save_resultados_todos_grupos;
+        funcion(resultados, self.saveCallback);
+    }
+
+    self.getResultados = function () {
+        var _resultados=[];
+        for (var i = 0; i < self.partidos().length; i++) {
+            var id = self.partidos()[i].key;
+            var resultadoSeleccioando = $("#" + id + " .seleccionado").text();
+            var resultadoGrabar;
+            switch (resultadoSeleccioando) {
+                case "Local":
+                    resultadoGrabar = "GANA_LOCAL";
+                    break;
+                case "Empate":
+                    resultadoGrabar = "EMPATE";
+                    break;
+                case "Visitante":
+                    resultadoGrabar = "GANA_VISITANTE";
+                    break;
+                default:
+                    resultadoGrabar = "NO_ESPECIFICADO";
+                    break;                
+            }
+            resultado={};
+            resultado.partido = id;
+            resultado.resultado = resultadoGrabar;
+            _resultados.push(resultado);
+        }
+        var resultados = {};
+        resultados.calendariokey = "";
+        resultados.resultados = _resultados;
+        resultados.correo = self.usuario();
+        resultados.grupo = self.grupo();
+
+        return resultados;
+    }
+    self.saveCallback = function (resp) {
+        $("#loading").hide();
+        var msg = "Resultados registrados";
+        if (resp.error)
+            msg = resp.mensaje;
+        
+        Materialize.toast(msg, 5000);
+    }
 }

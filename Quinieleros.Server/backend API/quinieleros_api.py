@@ -10,7 +10,7 @@ from google.appengine.ext import ndb
 from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
 from core.ligas import buscar_ligas
 from core.calendarios import buscar_calendarios
-from core.jornadas import buscar_jornada, buscar_jornada, buscar_resultados_jornada
+from core.jornadas import buscar_jornada, buscar_jornada, buscar_resultados_jornada, buscar_jornadas
 from core.resultados import guardar_resultados, guardar_resultados_todos_grupos, obtener_resultados_grupo
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import LigasMessage,LigasMessageCollection
