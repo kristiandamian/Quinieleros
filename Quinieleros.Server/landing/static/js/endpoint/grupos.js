@@ -10,6 +10,17 @@
         });
 }
 
+get_grupo = function (grupoKey, callback) {
+    gapi.client.quinieleros.obtener_grupo({
+        "grupoKey": grupoKey
+    }).execute(function (resp) {
+        var data = resp.result != undefined ? resp.result : null;
+        console.log(data);
+        if (callback)
+            callback(data);
+    });
+}
+
 save_grupo = function (nombre, usuarios, calendario, callback) {
     gapi.client.save_grupo({
         "Nombre": nombre,

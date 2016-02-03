@@ -48,12 +48,18 @@ def grabar(request, todos_los_grupos):
         respuesta.mensaje="No existe el calendario"
     return respuesta
 
-def obtener_resultados_grupo(request):
+def obtener_resultados_por_grupo(request, SoloJornadaActual):
     grupo=Grupo.get_by_id(request.grupoKey) 
     resultados = ResultadoGrupo()
     _match_res=[]
     if grupo!=None:
-        jornadas=Jornada.query(Jornada.calendario==grupo.calendario)
+        jornadas=[]
+        if SoloJornadaActual:
+            jornadas=Jornada.query(Jornada.calendario==grupo.calendario.id(), Jornada.abierto==False).order(Jornada.Numero)
+            if jornadas.__len__()>0:
+                jornadas=[jornadas[-1:]] # CREO UNA NUEVA LISTA SOLO CON LA JORNADA ACTUAL (LA ULTIMA CERRADA)
+        else:
+            jornadas=Jornada.query(Jornada.calendario==grupo.calendario.id()).order(Jornada.Numero)
         for j in jornadas:
             partidos=Partido.query(Partido.jornada==j.key)
             for usr in grupo.usuarios:

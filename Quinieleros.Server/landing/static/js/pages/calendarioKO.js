@@ -94,30 +94,38 @@ var modeloCalendario = function () {
     }
 
     self.getResultados = function () {
-        var _resultados=[];
-        for (var i = 0; i < self.partidos().length; i++) {
-            var id = self.partidos()[i].key;
-            var resultadoSeleccioando = $("#" + id + " .seleccionado").next("a").text().trim();
-            var resultadoGrabar;
-            switch (resultadoSeleccioando) {
-                case "Local":
-                    resultadoGrabar = "GANA_LOCAL";
-                    break;
-                case "Empate":
-                    resultadoGrabar = "EMPATE";
-                    break;
-                case "Visitante":
-                    resultadoGrabar = "GANA_VISITANTE";
-                    break;
-                default:
-                    resultadoGrabar = "NO_ESPECIFICADO";
-                    break;                
+        var _resultados = [];
+        if (self.partidos().length > 0) {
+            if (self.partidos()[0].jornadaAbierta) {
+                for (var i = 0; i < self.partidos().length; i++) {
+                    var id = self.partidos()[i].key;
+                    var resultadoSeleccioando = $("#" + id + " .seleccionado").next("a").text().trim();
+                    var resultadoGrabar;
+                    switch (resultadoSeleccioando) {
+                        case "Local":
+                            resultadoGrabar = "GANA_LOCAL";
+                            break;
+                        case "Empate":
+                            resultadoGrabar = "EMPATE";
+                            break;
+                        case "Visitante":
+                            resultadoGrabar = "GANA_VISITANTE";
+                            break;
+                        default:
+                            resultadoGrabar = "NO_ESPECIFICADO";
+                            break;
+                    }
+                    resultado = {};
+                    resultado.partido = id;
+                    resultado.resultado = resultadoGrabar;
+                    _resultados.push(resultado);
+                }
             }
-            resultado={};
-            resultado.partido = id;
-            resultado.resultado = resultadoGrabar;
-            _resultados.push(resultado);
+            else
+                Materialize.toast("La jornada ya no esta abierta, ya no se pueden registrar resultados", 5000);
         }
+        else
+            Materialize.toast("No hay partidos registrados", 5000);
         var resultados = {};
         resultados.calendariokey = "";
         resultados.resultados = _resultados;

@@ -2,12 +2,9 @@
 import logging
 import webapp2
 import webob.multidict
-
 from webapp2_extras import auth, sessions, jinja2
 from jinja2.runtime import TemplateNotFound
-
 from lib.simpleauth import SimpleAuthHandler
-
 from auth.handlers import BaseRequestHandler
 
 class estadisticasHandler(BaseRequestHandler):

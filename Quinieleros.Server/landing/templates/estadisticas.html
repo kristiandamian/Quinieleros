@@ -21,8 +21,8 @@
                 </thead>
                 <tbody data-bind='foreach: JornadaActual'>
                     <tr>
-                        <td data-bind="text: Nombre"></td>
-                        <td data-bind="text: total"></td>
+                        <td data-bind="text: nombre"></td>
+                        <td data-bind="text: aciertos"></td>
                         <td>
                             <a data-bind="click: $root.BuscarDato ">
                                 <span class="fa-stack fa-1x">
@@ -50,8 +50,8 @@
                 </thead>
                 <tbody data-bind='foreach: JornadaAcumulada'>
                     <tr>
-                        <td data-bind="text: Nombre"></td>
-                        <td data-bind="text: total"></td>
+                        <td data-bind="text: nombre"></td>
+                        <td data-bind="text: aciertos"></td>
                         <td>
                             <a data-bind="click: $root.BuscarDato ">
                                 <span class="fa-stack fa-1x">

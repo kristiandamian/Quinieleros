@@ -11,7 +11,7 @@ from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
 from core.ligas import buscar_ligas
 from core.calendarios import buscar_calendarios
 from core.jornadas import buscar_jornada, buscar_jornada, buscar_resultados_jornada, buscar_jornadas
-from core.resultados import guardar_resultados, guardar_resultados_todos_grupos, obtener_resultados_grupo
+from core.resultados import guardar_resultados, guardar_resultados_todos_grupos, obtener_resultados_por_grupo
 from endpointsModels import GrupoForm, BooleanMessage, GrupoMessage, GrupoMessageCollection
 from endpointsModels import LigasMessage,LigasMessageCollection
 from endpointsModels import CalendarioMessage, CalendarioMessageCollection, NumeroJornadaMessageCollection
@@ -84,11 +84,11 @@ class QuinielerosApi(remote.Service):
                   path='resultados/{grupoKey}', http_method='GET',
                   name='obtener_resultados_grupo')
     def obtener_resultados_grupo(self, request):
-        return buscar_resultados_jornada(request)
+        return buscar_resultados_jornada(request, False)
 
     @endpoints.method(GRUPO_JORNADA_GET_REQUEST, ResultadoGrupo,
-                  path='resultados/{grupoKey}/{jornada}', http_method='GET',
+                  path='resultados/JornadaActual/{grupoKey}/', http_method='GET',
                   name='obtener_resultados_jornada_grupo')
     def obtener_resultados_jornada_grupo(self, request):
-        return buscar_resultados_jornada(request)
+        return obtener_resultados_por_grupo(request, True)
 APPLICATION = endpoints.api_server([QuinielerosApi])
