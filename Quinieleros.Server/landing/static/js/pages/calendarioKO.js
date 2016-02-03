@@ -97,7 +97,7 @@ var modeloCalendario = function () {
         var _resultados=[];
         for (var i = 0; i < self.partidos().length; i++) {
             var id = self.partidos()[i].key;
-            var resultadoSeleccioando = $("#" + id + " .seleccionado").text();
+            var resultadoSeleccioando = $("#" + id + " .seleccionado").next("a").text().trim();
             var resultadoGrabar;
             switch (resultadoSeleccioando) {
                 case "Local":
