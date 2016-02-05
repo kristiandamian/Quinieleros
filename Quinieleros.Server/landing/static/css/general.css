@@ -8,6 +8,7 @@
 .logoTexto {
     display: inline !important;
     vertical-align: top;
+    text-shadow: 2px 3px 3px rgba(188,98,75, 1);
 }
 
 body {
