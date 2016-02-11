@@ -98,6 +98,11 @@ GRUPO_GET_REQUEST = endpoints.ResourceContainer(
     grupoKey=messages.StringField(1),
 )
 
+INVITE_POST_REQUEST = endpoints.ResourceContainer(
+    message_types.VoidMessage,
+    usuarios=messages.StringField(1),
+    grupo=messages.StringField(2),
+)
 
 GRUPO_JORNADA_GET_REQUEST = endpoints.ResourceContainer(
     message_types.VoidMessage,

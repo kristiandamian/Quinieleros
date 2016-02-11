@@ -7,7 +7,7 @@ from protorpc import messages
 from protorpc import message_types
 from protorpc import remote
 from google.appengine.ext import ndb
-from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos
+from core.grupos import grabar_grupo, buscar_grupo, buscar_grupos, invite_people
 from core.ligas import buscar_ligas
 from core.calendarios import buscar_calendarios
 from core.jornadas import buscar_jornada, buscar_jornada, buscar_resultados_jornada, buscar_jornadas
@@ -17,7 +17,7 @@ from endpointsModels import LigasMessage,LigasMessageCollection
 from endpointsModels import CalendarioMessage, CalendarioMessageCollection, NumeroJornadaMessageCollection
 from endpointsModels import JornadaMessage, PartidoMessage
 from endpointsModels import Resultados, Resultado, ResultadoGrupo
-from endpointsModels import GRUPO_GET_REQUEST, JORNADA_GET_REQUEST, JORNADA_MIN_GET_REQUEST, GRUPO_JORNADA_GET_REQUEST
+from endpointsModels import GRUPO_GET_REQUEST, JORNADA_GET_REQUEST, JORNADA_MIN_GET_REQUEST, GRUPO_JORNADA_GET_REQUEST, INVITE_POST_REQUEST
 
 package = 'Quinieleros'
 
@@ -43,6 +43,12 @@ class QuinielerosApi(remote.Service):
                   name='obtener_grupos_del_usuario')
     def get_grupo_byUser(self, request):
         return buscar_grupos(request)
+
+    @endpoints.method(INVITE_POST_REQUEST, BooleanMessage,
+                  path='grupos/invitar', http_method='POST',
+                  name='invite_people')
+    def put_users_group(self, request):
+        return invite_people(request)
     #######################     LIGAS      #######################
     @endpoints.method(message_types.VoidMessage, LigasMessageCollection,
                   path='ligas/all', http_method='GET',

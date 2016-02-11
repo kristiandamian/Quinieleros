@@ -58,6 +58,7 @@
             <i class="large material-icons">mode_edit</i>
         </a>
         <ul>
+            <li><a href="#modal1" class="btn-floating teal tooltipped modal-trigger" data-position="top" data-delay="50" data-tooltip="Invitar al grupo"><i class="material-icons">add</i></a></li>
             <li><a href="/estadisticas/{{grupo}}/" class="btn-floating teal tooltipped " data-position="top" data-delay="50" data-tooltip="Mis Estadisticas"><i class="material-icons">trending_up</i></a></li>
             <li><a href="/profile" class="btn-floating teal tooltipped"  data-position="top" data-delay="50" data-tooltip="Mis Grupos"><i class="material-icons">supervisor_account</i></a></li>
             <li><a class="btn-floating teal tooltipped"  data-position="top" data-delay="50" data-tooltip="grabar estos resultados para todos mis grupos" data-bind="click : GuardarTodos"><i class="material-icons">done_all</i></a></li>
@@ -65,6 +66,29 @@
         </ul>
     </div>
 
+</div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Crear nuevo grupo</h4>
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Nombre original!" readonly="readonly" id="name" type="text" class="validate" data-bind="value : NombreGrupo">
+                <label for="name">Grupo</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder="Correos separados por coma" id="correos" type="text" class="validate" data-bind="value : correos">
+                <label for="correos">Invitados</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" data-bind="click: addGenteGrupo">Invitar</a>
+    </div>
 </div>
 
 {% endblock %}

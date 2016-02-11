@@ -67,3 +67,22 @@ def buscar_grupos(request):
                 _gpos.append(_gpo)
     respuesta=GrupoMessageCollection(grupos=_gpos)
     return respuesta
+
+def invite_people(request):
+    usrs=[]
+    error=False
+    msg=""
+    try:
+        for user in request.usuarios:
+                usr=Usuario.get_or_insert(user)
+                usr.Correo = user
+                usr.put()
+                usrs.append(usr.key)
+        if usrs.__len__()>0:
+            _grp=Grupo.get_by_id(request.grupo)
+            _grp.usuarios=usrs 
+            _grp.put()
+    except Exception, ex:
+        error=True
+        msg= str(ex)
+    return BooleanMessage(error=error, mensaje=msg)

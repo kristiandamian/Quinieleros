@@ -32,3 +32,14 @@ save_grupo = function (nombre, usuarios, calendario, callback) {
             callback(resp.result);
     });
 }
+
+invite_people = function (usuarios, grupo, callback) {
+    gapi.client.invite_people({
+        "usuarios": usuarios,
+        "grupo": grupo
+    }).execute(function (resp) {
+        console.log(resp.result);
+        if (callback)
+            callback(resp.result);
+    });
+}

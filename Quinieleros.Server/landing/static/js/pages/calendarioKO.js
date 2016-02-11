@@ -4,9 +4,11 @@ var modeloCalendario = function () {
     var self = this;
 
     self.grupo = ko.observable();
+    self.NombreGrupo = ko.observable(); //FALTA OBTENER ESTE DATO
     self.usuario = ko.observable();
     self.jornadas = ko.observableArray();
     self.partidos = ko.observableArray();
+    self.correos = ko.observableArray();
 
     /// FUNCIONES
 
@@ -142,4 +144,17 @@ var modeloCalendario = function () {
         
         Materialize.toast(msg, 5000);
     }
+    self.addGenteGrupo=function(){
+        $("#loading").show();
+        invite_people(self.correos(), self.grupo(), self.addGenteGrupoCallback);
+    }
+    self.addGenteGrupoCallback = function (resp) {
+        $("#loading").hide();
+        if (resp.error)
+            Materialize.toast(resp.mensaje, 5000);
+        else
+            Materialize.toast("Se invito a la gente, ahora ¡a vencerlos!", 5000);
+        //
+    }
+
 }
